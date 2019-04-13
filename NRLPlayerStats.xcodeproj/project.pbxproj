@@ -33,6 +33,9 @@
 		CEC9805322618B500011858C /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805222618B500011858C /* UITableViewCell.swift */; };
 		CEC9805522618C340011858C /* MatchStatsViewController+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805422618C340011858C /* MatchStatsViewController+ViewState.swift */; };
 		CEC9805722618CBD0011858C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805622618CBD0011858C /* Array.swift */; };
+		CEC98059226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98058226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift */; };
+		CEC9805B226194250011858C /* MatchStatsPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805A226194250011858C /* MatchStatsPlayerView.swift */; };
+		CEC9805D226194D80011858C /* MatchStatsPlayerView+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805C226194D80011858C /* MatchStatsPlayerView+ViewState.swift */; };
 		CED4532822615C4A0021333B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532722615C4A0021333B /* AppDelegate.swift */; };
 		CED4532A22615C4A0021333B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532922615C4A0021333B /* ViewController.swift */; };
 		CED4532D22615C4A0021333B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4532B22615C4A0021333B /* Main.storyboard */; };
@@ -78,6 +81,9 @@
 		CEC9805222618B500011858C /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		CEC9805422618C340011858C /* MatchStatsViewController+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchStatsViewController+ViewState.swift"; sourceTree = "<group>"; };
 		CEC9805622618CBD0011858C /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		CEC98058226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchStatsPlayerCell+ViewState.swift"; sourceTree = "<group>"; };
+		CEC9805A226194250011858C /* MatchStatsPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchStatsPlayerView.swift; sourceTree = "<group>"; };
+		CEC9805C226194D80011858C /* MatchStatsPlayerView+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchStatsPlayerView+ViewState.swift"; sourceTree = "<group>"; };
 		CED4532422615C4A0021333B /* NRLPlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRLPlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4532722615C4A0021333B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED4532922615C4A0021333B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC9804A226189560011858C /* MatchStatsPlayerCell.swift */,
+				CEC98058226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift */,
 				CEC98049226189560011858C /* MatchStatsPlayerCell.xib */,
 				CEC980392261877C0011858C /* MatchStatsPlayerView */,
 			);
@@ -198,6 +205,8 @@
 		CEC980392261877C0011858C /* MatchStatsPlayerView */ = {
 			isa = PBXGroup;
 			children = (
+				CEC9805A226194250011858C /* MatchStatsPlayerView.swift */,
+				CEC9805C226194D80011858C /* MatchStatsPlayerView+ViewState.swift */,
 				CEC9803A2261877C0011858C /* Left */,
 				CEC98044226188970011858C /* Right */,
 			);
@@ -225,8 +234,8 @@
 		CEC98044226188970011858C /* Right */ = {
 			isa = PBXGroup;
 			children = (
-				CEC98045226188970011858C /* MatchStatsRightPlayerView.xib */,
 				CEC98046226188970011858C /* MatchStatsRightPlayerView.swift */,
+				CEC98045226188970011858C /* MatchStatsRightPlayerView.xib */,
 			);
 			path = Right;
 			sourceTree = "<group>";
@@ -421,7 +430,9 @@
 				CEC97FF42261614F0011858C /* APIError.swift in Sources */,
 				CEC98012226175FD0011858C /* StatsLoader.swift in Sources */,
 				CEC98006226166B80011858C /* String.swift in Sources */,
+				CEC9805D226194D80011858C /* MatchStatsPlayerView+ViewState.swift in Sources */,
 				CEC9805722618CBD0011858C /* Array.swift in Sources */,
+				CEC98059226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift in Sources */,
 				CEC9800B22616A040011858C /* StatsEndpoint.swift in Sources */,
 				CEC98043226187A20011858C /* XibView.swift in Sources */,
 				CEC9800D22616A040011858C /* StatsAPIHost.swift in Sources */,
@@ -429,6 +440,7 @@
 				CEC98010226173160011858C /* LeagueStat.swift in Sources */,
 				CEC98048226188970011858C /* MatchStatsRightPlayerView.swift in Sources */,
 				CEC9805322618B500011858C /* UITableViewCell.swift in Sources */,
+				CEC9805B226194250011858C /* MatchStatsPlayerView.swift in Sources */,
 				CEC9800C22616A040011858C /* StatsAPI.swift in Sources */,
 				CED4532822615C4A0021333B /* AppDelegate.swift in Sources */,
 				CEC98042226187A20011858C /* NibLoading.swift in Sources */,
