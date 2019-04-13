@@ -1,4 +1,5 @@
 github "Alamofire/Alamofire" ~> 4.7
+github "kean/Nuke"
 
 # Testing
 github "atetlaw/shawshank"
