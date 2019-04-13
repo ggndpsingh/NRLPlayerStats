@@ -15,6 +15,9 @@
 		CEC97FFA226161B20011858C /* Shawshank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC97FF9226161B20011858C /* Shawshank.framework */; };
 		CEC98005226166B80011858C /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98002226166B80011858C /* Decodable.swift */; };
 		CEC98006226166B80011858C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98003226166B80011858C /* String.swift */; };
+		CEC9800B22616A040011858C /* StatsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9800822616A040011858C /* StatsEndpoint.swift */; };
+		CEC9800C22616A040011858C /* StatsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9800922616A040011858C /* StatsAPI.swift */; };
+		CEC9800D22616A040011858C /* StatsAPIHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9800A22616A040011858C /* StatsAPIHost.swift */; };
 		CED4532822615C4A0021333B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532722615C4A0021333B /* AppDelegate.swift */; };
 		CED4532A22615C4A0021333B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532922615C4A0021333B /* ViewController.swift */; };
 		CED4532D22615C4A0021333B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4532B22615C4A0021333B /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 		CEC97FF9226161B20011858C /* Shawshank.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Shawshank.framework; path = Carthage/Build/iOS/Shawshank.framework; sourceTree = "<group>"; };
 		CEC98002226166B80011858C /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		CEC98003226166B80011858C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CEC9800822616A040011858C /* StatsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsEndpoint.swift; sourceTree = "<group>"; };
+		CEC9800922616A040011858C /* StatsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsAPI.swift; sourceTree = "<group>"; };
+		CEC9800A22616A040011858C /* StatsAPIHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsAPIHost.swift; sourceTree = "<group>"; };
 		CED4532422615C4A0021333B /* NRLPlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRLPlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4532722615C4A0021333B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED4532922615C4A0021333B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CEC9800722616A040011858C /* PlayerStatsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CEC9800A22616A040011858C /* StatsAPIHost.swift */,
+				CEC9800922616A040011858C /* StatsAPI.swift */,
+				CEC9800822616A040011858C /* StatsEndpoint.swift */,
+			);
+			path = PlayerStatsAPI;
+			sourceTree = "<group>";
+		};
 		CED4531B22615C4A0021333B = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +143,7 @@
 			children = (
 				CEC97FEE2261614F0011858C /* API */,
 				CEC98000226166B80011858C /* Extensions */,
+				CEC9800722616A040011858C /* PlayerStatsAPI */,
 				CED4532722615C4A0021333B /* AppDelegate.swift */,
 				CED4532922615C4A0021333B /* ViewController.swift */,
 				CED4532B22615C4A0021333B /* Main.storyboard */,
@@ -273,7 +290,10 @@
 				CED4532A22615C4A0021333B /* ViewController.swift in Sources */,
 				CEC97FF42261614F0011858C /* APIError.swift in Sources */,
 				CEC98006226166B80011858C /* String.swift in Sources */,
+				CEC9800B22616A040011858C /* StatsEndpoint.swift in Sources */,
+				CEC9800D22616A040011858C /* StatsAPIHost.swift in Sources */,
 				CEC97FF32261614F0011858C /* APIRequestBuilder.swift in Sources */,
+				CEC9800C22616A040011858C /* StatsAPI.swift in Sources */,
 				CED4532822615C4A0021333B /* AppDelegate.swift in Sources */,
 				CEC98005226166B80011858C /* Decodable.swift in Sources */,
 				CEC97FF62261614F0011858C /* Endpoint.swift in Sources */,
