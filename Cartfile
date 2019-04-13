@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" ~> 4.7
+
+# Testing
+github "atetlaw/shawshank"
