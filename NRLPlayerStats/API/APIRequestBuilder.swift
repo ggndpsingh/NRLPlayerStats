@@ -21,7 +21,15 @@ struct APIRequestBuilder: URLRequestConvertible {
             throw APIError.invalidRequest(builder: self)
         }
         
-        var request = URLRequest(url: url)
+        // Normally this wouldn't be required,
+        // but the semi-colons in the endpoint are tripping up the service request.
+        guard
+            let decodedUrlString = url.absoluteString.removingPercentEncoding,
+            let decodedURL = URL(string: decodedUrlString) else {
+                throw APIError.invalidRequest(builder: self)
+        }
+        
+        var request = URLRequest(url: decodedURL)
         request.httpMethod = endpoint.method.rawValue
         return try endpoint.configure(request)
     }
