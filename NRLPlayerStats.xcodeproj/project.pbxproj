@@ -24,6 +24,8 @@
 		CEC9803E2261877C0011858C /* MatchStatsLeftPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9803C2261877C0011858C /* MatchStatsLeftPlayerView.swift */; };
 		CEC98042226187A20011858C /* NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98040226187A20011858C /* NibLoading.swift */; };
 		CEC98043226187A20011858C /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98041226187A20011858C /* XibView.swift */; };
+		CEC98047226188970011858C /* MatchStatsRightPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC98045226188970011858C /* MatchStatsRightPlayerView.xib */; };
+		CEC98048226188970011858C /* MatchStatsRightPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98046226188970011858C /* MatchStatsRightPlayerView.swift */; };
 		CED4532822615C4A0021333B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532722615C4A0021333B /* AppDelegate.swift */; };
 		CED4532A22615C4A0021333B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532922615C4A0021333B /* ViewController.swift */; };
 		CED4532D22615C4A0021333B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4532B22615C4A0021333B /* Main.storyboard */; };
@@ -60,6 +62,8 @@
 		CEC9803C2261877C0011858C /* MatchStatsLeftPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchStatsLeftPlayerView.swift; sourceTree = "<group>"; };
 		CEC98040226187A20011858C /* NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoading.swift; sourceTree = "<group>"; };
 		CEC98041226187A20011858C /* XibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		CEC98045226188970011858C /* MatchStatsRightPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchStatsRightPlayerView.xib; sourceTree = "<group>"; };
+		CEC98046226188970011858C /* MatchStatsRightPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchStatsRightPlayerView.swift; sourceTree = "<group>"; };
 		CED4532422615C4A0021333B /* NRLPlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRLPlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4532722615C4A0021333B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED4532922615C4A0021333B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC9803A2261877C0011858C /* Left */,
+				CEC98044226188970011858C /* Right */,
 			);
 			path = MatchStatsPlayerView;
 			sourceTree = "<group>";
@@ -195,6 +200,15 @@
 				CEC98041226187A20011858C /* XibView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CEC98044226188970011858C /* Right */ = {
+			isa = PBXGroup;
+			children = (
+				CEC98045226188970011858C /* MatchStatsRightPlayerView.xib */,
+				CEC98046226188970011858C /* MatchStatsRightPlayerView.swift */,
+			);
+			path = Right;
 			sourceTree = "<group>";
 		};
 		CED4531B22615C4A0021333B = {
@@ -330,6 +344,7 @@
 				CEC9803D2261877C0011858C /* MatchStatsLeftPlayerView.xib in Resources */,
 				CED4533222615C4B0021333B /* LaunchScreen.storyboard in Resources */,
 				CED4532F22615C4B0021333B /* Assets.xcassets in Resources */,
+				CEC98047226188970011858C /* MatchStatsRightPlayerView.xib in Resources */,
 				CED4532D22615C4A0021333B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +395,7 @@
 				CEC9800D22616A040011858C /* StatsAPIHost.swift in Sources */,
 				CEC97FF32261614F0011858C /* APIRequestBuilder.swift in Sources */,
 				CEC98010226173160011858C /* LeagueStat.swift in Sources */,
+				CEC98048226188970011858C /* MatchStatsRightPlayerView.swift in Sources */,
 				CEC9800C22616A040011858C /* StatsAPI.swift in Sources */,
 				CED4532822615C4A0021333B /* AppDelegate.swift in Sources */,
 				CEC98042226187A20011858C /* NibLoading.swift in Sources */,
