@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class PlayerStatsViewController: UITableViewController, StoryboardLoading {
+class PlayerStatsViewController: UITableViewController {
+    private let statCellIdentifier = "PlayerStatCell"
+    
     var details: (Int, Int)? = nil {
         didSet {
             guard let (teamId, playerId) = details else { return }
@@ -47,6 +49,7 @@ class PlayerStatsViewController: UITableViewController, StoryboardLoading {
     
     private func registerCells() {
         tableView.registerCell(PlayerDetailsViewCell.self)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: statCellIdentifier)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -84,7 +87,7 @@ extension PlayerStatsViewController {
             }
             return cell
         default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "statCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: statCellIdentifier, for: indexPath)
             cell.textLabel?.text = viewState.title(at: indexPath)
             cell.detailTextLabel?.text = viewState.value(at: indexPath)
             return cell

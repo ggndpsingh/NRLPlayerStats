@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MatchStatsViewController: UITableViewController, StoryboardLoading {
+class MatchStatsViewController: UITableViewController {
     
     var match: MatchSelectionViewController.Match = .init() {
         didSet {
@@ -102,7 +102,7 @@ extension MatchStatsViewController: MatchStatsPlayerCellDelegate {
     }
     
     private func presentPlayerStats(teamId: Int, playerId: Int) {
-        let playervc = PlayerStatsViewController.render()
+        let playervc = PlayerStatsViewController()
         playervc.details = (teamId, playerId)
         navigationController?.pushViewController(playervc, animated: true)
     }

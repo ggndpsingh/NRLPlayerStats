@@ -26,7 +26,7 @@ class MatchSelectionViewController: UIViewController {
 
 extension MatchSelectionViewController: MatchSelectionContentViewDelegate {
     func matchSelectionContentView(_ contentView: MatchSelectionContentView, didSelectMatch match: MatchSelectionViewController.Match) {
-        let viewController = MatchStatsViewController.render()
+        let viewController = MatchStatsViewController()
         viewController.match = match
         navigationController?.pushViewController(viewController, animated: true)
     }
