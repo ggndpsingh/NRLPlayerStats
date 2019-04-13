@@ -1,0 +1,27 @@
+[
+    {
+        "match_id": "NRL20172101",
+        "team_A": {
+            "id": 55011,
+            "top_players": [
+                {
+                    "id": 108392,
+                    "stat_value": 51,
+                    "jumper_number": 9
+                }
+            ]
+        },
+        "team_B": {
+            "id": 55005,
+            "short_name": "Bulldogs",
+            "top_players": [
+                {
+                    "id": 108896,
+                    "position": "Prop Forward",
+                    "full_name": "Aiden Tolman"
+                    "jumper_number": 8
+                }
+            ]
+        },
+    }
+]

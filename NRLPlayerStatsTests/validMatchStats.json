@@ -1,0 +1,106 @@
+[
+    {
+        "match_id": "NRL20172101",
+        "team_A": {
+            "id": 55011,
+            "name": "Penrith",
+            "code": "PEN",
+            "short_name": "Panthers",
+            "top_players": [
+                {
+                    "id": 108392,
+                    "position": "Hooker",
+                    "full_name": "Peter Wallace",
+                    "short_name": "P. Wallace",
+                    "stat_value": 51,
+                    "jumper_number": 9
+                },
+                {
+                    "id": 114810,
+                    "position": "Second Row",
+                    "full_name": "Corey Harawira-Naera",
+                    "short_name": "C. Harawira-Naera",
+                    "stat_value": 32,
+                    "jumper_number": 11
+                }
+            ]
+        },
+        "team_B": {
+            "id": 55005,
+            "name": "Canterbury",
+            "code": "CBY",
+            "short_name": "Bulldogs",
+            "top_players": [
+                {
+                    "id": 108896,
+                    "position": "Prop Forward",
+                    "full_name": "Aiden Tolman",
+                    "short_name": "A. Tolman",
+                    "stat_value": 54,
+                    "jumper_number": 8
+                },
+                {
+                    "id": 112965,
+                    "position": "Hooker",
+                    "full_name": "Moses Mbye",
+                    "short_name": "M. Mbye",
+                    "stat_value": 37,
+                    "jumper_number": 9
+                }
+            ]
+        },
+        "stat_type": "tackles"
+    },
+    {
+        "match_id": "NRL20172101",
+        "team_A": {
+            "id": 55011,
+            "name": "Penrith",
+            "code": "PEN",
+            "short_name": "Panthers",
+            "top_players": [
+                {
+                    "id": 108392,
+                    "position": "Hooker",
+                    "full_name": "Peter Wallace",
+                    "short_name": "P. Wallace",
+                    "stat_value": 68,
+                    "jumper_number": 9
+                },
+                {
+                    "id": 114198,
+                    "position": "Centre",
+                    "full_name": "Waqa Blake",
+                    "short_name": "W. Blake",
+                    "stat_value": 60,
+                    "jumper_number": 4
+                }
+            ]
+        },
+        "team_B": {
+            "id": 55005,
+            "name": "Canterbury",
+            "code": "CBY",
+            "short_name": "Bulldogs",
+            "top_players": [
+                {
+                    "id": 108896,
+                    "position": "Prop Forward",
+                    "full_name": "Aiden Tolman",
+                    "short_name": "A. Tolman",
+                    "stat_value": 84,
+                    "jumper_number": 8
+                },
+                {
+                    "id": 109768,
+                    "position": "Five Eighth",
+                    "full_name": "Josh Reynolds",
+                    "short_name": "J. Reynolds",
+                    "stat_value": 79,
+                    "jumper_number": 6
+                }
+            ]
+        },
+        "stat_type": "fantasy_points"
+    }
+]
