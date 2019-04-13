@@ -58,11 +58,6 @@ class PlayerStatsViewController: UITableViewController {
         refreshControl?.addTarget(self, action: #selector(loadStats), for: .valueChanged)
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        self.tableView.tableHeaderView?.layoutIfNeeded()
-    }
-    
     @objc
     private func loadStats() {
         statsLoader?.request { [weak self] result in
@@ -104,6 +99,7 @@ extension PlayerStatsViewController {
                 playerCell.viewState = .init(player: player)
             }
             return cell
+            
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: PlayerDetailsStatCell.reuseIdentifier, for: indexPath)
             cell.textLabel?.text = viewState.title(at: indexPath)
@@ -120,12 +116,5 @@ extension PlayerStatsViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewState.titleForHeader(in: section)
-    }
-}
-
-extension PlayerStatsViewController {
-    struct Player {
-        let teamId: Int
-        let playerId: Int
     }
 }

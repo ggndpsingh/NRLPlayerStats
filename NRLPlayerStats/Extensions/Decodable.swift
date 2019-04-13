@@ -12,7 +12,7 @@ extension Decodable {
     static var decoder: JSONDecoder {
         let dateFormatter: DateFormatter = {
             let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-ddd"
+            formatter.dateFormat = "yyyy-MM-dd"
             formatter.locale = Locale.current
             return formatter
         }()

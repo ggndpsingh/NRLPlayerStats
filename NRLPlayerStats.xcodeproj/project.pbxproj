@@ -12,6 +12,10 @@
 		CE78DA422261E5A700F9DA1F /* MatchSelectionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA412261E5A700F9DA1F /* MatchSelectionContentView.swift */; };
 		CE78DA442261F26400F9DA1F /* PlayerDetailsStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA432261F26400F9DA1F /* PlayerDetailsStatCell.swift */; };
 		CE78DA462261F2AD00F9DA1F /* PlayerDetailsStatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE78DA452261F2AD00F9DA1F /* PlayerDetailsStatCell.xib */; };
+		CE78DA482261F37D00F9DA1F /* TestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA472261F37D00F9DA1F /* TestAPI.swift */; };
+		CE78DA4B2261F3E700F9DA1F /* invalidMatchStats.json in Resources */ = {isa = PBXBuildFile; fileRef = CE78DA492261F3E700F9DA1F /* invalidMatchStats.json */; };
+		CE78DA4C2261F3E700F9DA1F /* validMatchStats.json in Resources */ = {isa = PBXBuildFile; fileRef = CE78DA4A2261F3E700F9DA1F /* validMatchStats.json */; };
+		CE78DA4F2261F51100F9DA1F /* validPlayerStats.json in Resources */ = {isa = PBXBuildFile; fileRef = CE78DA4E2261F51100F9DA1F /* validPlayerStats.json */; };
 		CEC97FF32261614F0011858C /* APIRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FEF2261614F0011858C /* APIRequestBuilder.swift */; };
 		CEC97FF42261614F0011858C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FF02261614F0011858C /* APIError.swift */; };
 		CEC97FF52261614F0011858C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FF12261614F0011858C /* API.swift */; };
@@ -50,7 +54,6 @@
 		CEC9807B2261CA990011858C /* PlayerDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9807A2261CA990011858C /* PlayerDetailsViewCell.swift */; };
 		CEC9807D2261CA9E0011858C /* PlayerDetailsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC9807C2261CA9E0011858C /* PlayerDetailsViewCell.xib */; };
 		CED4532822615C4A0021333B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532722615C4A0021333B /* AppDelegate.swift */; };
-		CED4532A22615C4A0021333B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532922615C4A0021333B /* ViewController.swift */; };
 		CED4532D22615C4A0021333B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4532B22615C4A0021333B /* Main.storyboard */; };
 		CED4532F22615C4B0021333B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED4532E22615C4B0021333B /* Assets.xcassets */; };
 		CED4533222615C4B0021333B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4533022615C4B0021333B /* LaunchScreen.storyboard */; };
@@ -73,6 +76,10 @@
 		CE78DA412261E5A700F9DA1F /* MatchSelectionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSelectionContentView.swift; sourceTree = "<group>"; };
 		CE78DA432261F26400F9DA1F /* PlayerDetailsStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsStatCell.swift; sourceTree = "<group>"; };
 		CE78DA452261F2AD00F9DA1F /* PlayerDetailsStatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDetailsStatCell.xib; sourceTree = "<group>"; };
+		CE78DA472261F37D00F9DA1F /* TestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPI.swift; sourceTree = "<group>"; };
+		CE78DA492261F3E700F9DA1F /* invalidMatchStats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalidMatchStats.json; sourceTree = "<group>"; };
+		CE78DA4A2261F3E700F9DA1F /* validMatchStats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = validMatchStats.json; sourceTree = "<group>"; };
+		CE78DA4E2261F51100F9DA1F /* validPlayerStats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = validPlayerStats.json; sourceTree = "<group>"; };
 		CEC97FEF2261614F0011858C /* APIRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestBuilder.swift; sourceTree = "<group>"; };
 		CEC97FF02261614F0011858C /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		CEC97FF12261614F0011858C /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -112,7 +119,6 @@
 		CEC9807C2261CA9E0011858C /* PlayerDetailsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDetailsViewCell.xib; sourceTree = "<group>"; };
 		CED4532422615C4A0021333B /* NRLPlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRLPlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4532722615C4A0021333B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CED4532922615C4A0021333B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CED4532C22615C4A0021333B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CED4532E22615C4B0021333B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CED4533122615C4B0021333B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -158,6 +164,15 @@
 				CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE78DA502261FAB900F9DA1F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE78DA432261F26400F9DA1F /* PlayerDetailsStatCell.swift */,
+				CE78DA452261F2AD00F9DA1F /* PlayerDetailsStatCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CEC97FE92261609F0011858C /* Frameworks */ = {
@@ -335,8 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC980732261BFE20011858C /* PlayerStatsViewController.swift */,
-				CE78DA432261F26400F9DA1F /* PlayerDetailsStatCell.swift */,
-				CE78DA452261F2AD00F9DA1F /* PlayerDetailsStatCell.xib */,
+				CE78DA502261FAB900F9DA1F /* Cell */,
 				CEC980792261CA850011858C /* PlayerDetailsView */,
 			);
 			path = View;
@@ -381,7 +395,6 @@
 				CEC980362261877C0011858C /* MatchStats */,
 				CEC980692261B0690011858C /* PlayerStats */,
 				CED4532722615C4A0021333B /* AppDelegate.swift */,
-				CED4532922615C4A0021333B /* ViewController.swift */,
 				CED4532B22615C4A0021333B /* Main.storyboard */,
 				CED4532E22615C4B0021333B /* Assets.xcassets */,
 				CED4533022615C4B0021333B /* LaunchScreen.storyboard */,
@@ -395,7 +408,11 @@
 		CED4533B22615C4B0021333B /* NRLPlayerStatsTests */ = {
 			isa = PBXGroup;
 			children = (
+				CE78DA472261F37D00F9DA1F /* TestAPI.swift */,
 				CED4533C22615C4B0021333B /* NRLPlayerStatsTests.swift */,
+				CE78DA492261F3E700F9DA1F /* invalidMatchStats.json */,
+				CE78DA4A2261F3E700F9DA1F /* validMatchStats.json */,
+				CE78DA4E2261F51100F9DA1F /* validPlayerStats.json */,
 				CED4533E22615C4B0021333B /* Info.plist */,
 			);
 			path = NRLPlayerStatsTests;
@@ -429,6 +446,7 @@
 				CED4533422615C4B0021333B /* Sources */,
 				CED4533522615C4B0021333B /* Frameworks */,
 				CED4533622615C4B0021333B /* Resources */,
+				CE78DA4D2261F46900F9DA1F /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -500,12 +518,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE78DA4C2261F3E700F9DA1F /* validMatchStats.json in Resources */,
+				CE78DA4F2261F51100F9DA1F /* validPlayerStats.json in Resources */,
+				CE78DA4B2261F3E700F9DA1F /* invalidMatchStats.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		CE78DA4D2261F46900F9DA1F /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Shawshank.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		CEC97FE82261605B0011858C /* Copy Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,7 +574,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC9803E2261877C0011858C /* MatchStatsLeftPlayerView.swift in Sources */,
-				CED4532A22615C4A0021333B /* ViewController.swift in Sources */,
 				CEC9804C226189570011858C /* MatchStatsPlayerCell.swift in Sources */,
 				CEC97FF42261614F0011858C /* APIError.swift in Sources */,
 				CEC98012226175FD0011858C /* StatsLoader.swift in Sources */,
@@ -574,6 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE78DA482261F37D00F9DA1F /* TestAPI.swift in Sources */,
 				CED4533D22615C4B0021333B /* NRLPlayerStatsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
