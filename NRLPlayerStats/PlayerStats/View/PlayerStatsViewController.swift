@@ -18,24 +18,39 @@ class PlayerStatsViewController: UITableViewController, StoryboardLoading {
         }
     }
     
-    private var statsLoader: StatsLoader<LeaguePlayer>?
     private var player: LeaguePlayer? {
         didSet {
             title = player?.name
+            self.viewState = .init(player: player)
             setupHeader()
+            tableView.reloadData()
         }
     }
     
-    override func loadView() {
-        super.loadView()
-        registerCells()
+    private var statsLoader: StatsLoader<LeaguePlayer>?
+    
+    private var viewState: ViewState = .init() {
+        didSet {
+            tableView.reloadData()
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Player Stats"
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+        loadStats()
+    }
+    
+    private func setupHeader() {
+        let detailsView = PlayerDetailsView.render()
+        detailsView?.viewState = .init(player: player)
+        tableView.tableHeaderView = detailsView
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
+    }
+    
+    private func loadStats() {
         statsLoader?.request { [weak self] result in
             switch result {
             case .success(let player):
@@ -45,17 +60,22 @@ class PlayerStatsViewController: UITableViewController, StoryboardLoading {
             }
         }
     }
-    
-    private func registerCells() {
-        tableView.registerCell(MatchStatsPlayerCell.self)
+}
+
+extension PlayerStatsViewController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return viewState.numberOfSections
     }
     
-    private func setupHeader() {
-        let detailsView = PlayerDetailsView.render()
-        detailsView?.viewState = .init(player: player)
-        tableView.tableHeaderView = detailsView
-        view.setNeedsLayout()
-        view.layoutIfNeeded()
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewState.numberOfRows(in: section)
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "statCell", for: indexPath)
+        cell.textLabel?.text = viewState.title(at: indexPath)
+        cell.detailTextLabel?.text = viewState.value(at: indexPath)
+        return cell
     }
 }
 

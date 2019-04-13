@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE78DA3C2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */; };
 		CEC97FF32261614F0011858C /* APIRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FEF2261614F0011858C /* APIRequestBuilder.swift */; };
 		CEC97FF42261614F0011858C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FF02261614F0011858C /* APIError.swift */; };
 		CEC97FF52261614F0011858C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FF12261614F0011858C /* API.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerStatsViewController+ViewState.swift"; sourceTree = "<group>"; };
 		CEC97FEF2261614F0011858C /* APIRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestBuilder.swift; sourceTree = "<group>"; };
 		CEC97FF02261614F0011858C /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		CEC97FF12261614F0011858C /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC980732261BFE20011858C /* PlayerStatsViewController.swift */,
+				CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */,
 				CEC980792261CA850011858C /* PlayerDetailsView */,
 			);
 			path = View;
@@ -510,6 +513,7 @@
 				CEC97FF42261614F0011858C /* APIError.swift in Sources */,
 				CEC98012226175FD0011858C /* StatsLoader.swift in Sources */,
 				CEC98006226166B80011858C /* String.swift in Sources */,
+				CE78DA3C2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift in Sources */,
 				CEC9805D226194D80011858C /* MatchStatsPlayerView+ViewState.swift in Sources */,
 				CEC9805722618CBD0011858C /* Array.swift in Sources */,
 				CEC98059226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift in Sources */,

@@ -71,7 +71,7 @@ extension LeaguePlayer {
         let kickErrors: Int?
         let kickMetres: Int?
         let kickReturnMeters: Int?
-        let KickReturns: Int?
+        let kickReturns: Int?
         let kicks4020: Int?
         let kicksDead: Int?
         let lastTouchTryAssists: Int?
@@ -141,7 +141,7 @@ extension LeaguePlayer.LastMatchStats {
         case kickErrors = "kick_errors"
         case kickMetres = "kick_metres"
         case kickReturnMeters = "kick_return_metres"
-        case KickReturns = "kick_returns"
+        case kickReturns = "kick_returns"
         case kicks4020 = "kicks_4020"
         case kicksDead = "kicks_dead"
         case lastTouchTryAssists = "last_touch_try_assists"
