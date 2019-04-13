@@ -13,6 +13,8 @@
 		CEC97FF62261614F0011858C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FF22261614F0011858C /* Endpoint.swift */; };
 		CEC97FF8226161A90011858C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC97FF7226161A90011858C /* Alamofire.framework */; };
 		CEC97FFA226161B20011858C /* Shawshank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC97FF9226161B20011858C /* Shawshank.framework */; };
+		CEC98005226166B80011858C /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98002226166B80011858C /* Decodable.swift */; };
+		CEC98006226166B80011858C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98003226166B80011858C /* String.swift */; };
 		CED4532822615C4A0021333B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532722615C4A0021333B /* AppDelegate.swift */; };
 		CED4532A22615C4A0021333B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532922615C4A0021333B /* ViewController.swift */; };
 		CED4532D22615C4A0021333B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4532B22615C4A0021333B /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		CEC97FF22261614F0011858C /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CEC97FF7226161A90011858C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CEC97FF9226161B20011858C /* Shawshank.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Shawshank.framework; path = Carthage/Build/iOS/Shawshank.framework; sourceTree = "<group>"; };
+		CEC98002226166B80011858C /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		CEC98003226166B80011858C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CED4532422615C4A0021333B /* NRLPlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRLPlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4532722615C4A0021333B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED4532922615C4A0021333B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,15 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		CEC98000226166B80011858C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEC98002226166B80011858C /* Decodable.swift */,
+				CEC98003226166B80011858C /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CED4531B22615C4A0021333B = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC97FEE2261614F0011858C /* API */,
+				CEC98000226166B80011858C /* Extensions */,
 				CED4532722615C4A0021333B /* AppDelegate.swift */,
 				CED4532922615C4A0021333B /* ViewController.swift */,
 				CED4532B22615C4A0021333B /* Main.storyboard */,
@@ -258,8 +272,10 @@
 			files = (
 				CED4532A22615C4A0021333B /* ViewController.swift in Sources */,
 				CEC97FF42261614F0011858C /* APIError.swift in Sources */,
+				CEC98006226166B80011858C /* String.swift in Sources */,
 				CEC97FF32261614F0011858C /* APIRequestBuilder.swift in Sources */,
 				CED4532822615C4A0021333B /* AppDelegate.swift in Sources */,
+				CEC98005226166B80011858C /* Decodable.swift in Sources */,
 				CEC97FF62261614F0011858C /* Endpoint.swift in Sources */,
 				CEC97FF52261614F0011858C /* API.swift in Sources */,
 			);

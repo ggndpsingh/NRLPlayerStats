@@ -25,7 +25,7 @@ extension API {
     /// Make the API request and return the reponse as Result
     ///
     /// - Parameters:
-    ///     - endpoint: The endpoing to be called
+    ///     - endpoint: The endpoint to be called
     ///     - completion: The completion handler block to be run after the request completes
     ///
     /// We are using the Result type here, new in Swift 5.
