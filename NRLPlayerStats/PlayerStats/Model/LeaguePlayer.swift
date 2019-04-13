@@ -18,7 +18,7 @@ struct LeaguePlayer: Codable {
     let height: Double
     let otherNames: String
     let weight: Double
-    let lastMatchId: String
+    let lastMatchId: String?
     let lastMatchStats: LastMatchStats
     
     private enum CodingKeys: String, CodingKey {

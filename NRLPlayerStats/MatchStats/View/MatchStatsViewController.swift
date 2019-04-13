@@ -87,8 +87,13 @@ extension MatchStatsViewController {
 
 extension MatchStatsViewController: MatchStatsPlayerCellDelegate {
     func matchStatsPlayerCell(_ cell: MatchStatsPlayerCell, didTapOnHeadshot playerId: Int, teamId: Int) {
-        let endpoint: StatsEndpoint = .player(teamId, playerId)
-        print(endpoint)
+        presentPlayerStats(teamId: teamId, playerId: playerId)
+    }
+    
+    private func presentPlayerStats(teamId: Int, playerId: Int) {
+        let playervc = PlayerStatsViewController()
+        playervc.player = .init(teamId: teamId, playerId: playerId)
+        navigationController?.pushViewController(playervc, animated: true)
     }
 }
 
