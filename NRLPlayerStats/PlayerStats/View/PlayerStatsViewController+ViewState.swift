@@ -7,22 +7,33 @@
 //
 
 import Foundation
+import UIKit
 
 extension PlayerStatsViewController {
     struct ViewState {
         private var rows: [Row] = []
         
-        let numberOfSections: Int = 1
+        let numberOfSections: Int = 2
         
         func numberOfRows(in section: Int) -> Int {
-            return rows.count
+            return section == 0 ? 1 : rows.count
+        }
+        
+        func heightForHeader(in section: Int) -> CGFloat {
+            return section == 0 ? 0 : 44
+        }
+        
+        func titleForHeader(in section: Int) -> String? {
+            return section == 0 ? nil : "Stats"
         }
         
         func title(at indexPath: IndexPath) -> String? {
+            guard indexPath.section != 0 else { return nil }
             return rows.element(at: indexPath.row)?.title
         }
         
         func value(at indexPath: IndexPath) -> String? {
+            guard indexPath.section != 0 else { return nil }
             return rows.element(at: indexPath.row)?.stringValue
         }
         

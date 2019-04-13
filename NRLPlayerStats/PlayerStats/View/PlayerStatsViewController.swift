@@ -22,7 +22,6 @@ class PlayerStatsViewController: UITableViewController, StoryboardLoading {
         didSet {
             title = player?.name
             self.viewState = .init(player: player)
-            setupHeader()
             tableView.reloadData()
         }
     }
@@ -35,6 +34,11 @@ class PlayerStatsViewController: UITableViewController, StoryboardLoading {
         }
     }
     
+    override func loadView() {
+        super.loadView()
+        registerCells()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Player Stats"
@@ -42,12 +46,13 @@ class PlayerStatsViewController: UITableViewController, StoryboardLoading {
         loadStats()
     }
     
-    private func setupHeader() {
-        let detailsView = PlayerDetailsView.render()
-        detailsView?.viewState = .init(player: player)
-        tableView.tableHeaderView = detailsView
-        view.setNeedsLayout()
-        view.layoutIfNeeded()
+    private func registerCells() {
+        tableView.registerCell(PlayerDetailsViewCell.self)
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        self.tableView.tableHeaderView?.layoutIfNeeded()
     }
     
     private func loadStats() {
@@ -72,10 +77,29 @@ extension PlayerStatsViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "statCell", for: indexPath)
-        cell.textLabel?.text = viewState.title(at: indexPath)
-        cell.detailTextLabel?.text = viewState.value(at: indexPath)
-        return cell
+        switch indexPath.section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: PlayerDetailsViewCell.reuseIdentifier, for: indexPath)
+            if let playerCell = cell as? PlayerDetailsViewCell {
+                playerCell.viewState = .init(player: player)
+            }
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "statCell", for: indexPath)
+            cell.textLabel?.text = viewState.title(at: indexPath)
+            cell.detailTextLabel?.text = viewState.value(at: indexPath)
+            return cell
+        }
+    }
+}
+
+extension PlayerStatsViewController {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return viewState.heightForHeader(in: section)
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewState.titleForHeader(in: section)
     }
 }
 

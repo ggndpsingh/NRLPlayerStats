@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-class PlayerDetailsView: UIView, NibLoading {
-    @IBOutlet private var imageView: AsyncImageView!
+class PlayerDetailsViewCell: UITableViewCell, NibLoading {
+    @IBOutlet private var headshotView: AsyncImageView!
     @IBOutlet private var nameLabel: UILabel!
     @IBOutlet private var positionLabel: UILabel!
     
@@ -24,16 +24,16 @@ class PlayerDetailsView: UIView, NibLoading {
     
     private func loadImage() {
         guard let id = viewState.playerId else {
-            imageView.image = nil
+            headshotView.image = nil
             return
         }
         
-        imageView.isRound = true
-        imageView.url = StatsAPI.getMediaUrl(playerId: id)
+        headshotView.isRound = true
+        headshotView.url = StatsAPI.getMediaUrl(playerId: id)
     }
 }
 
-extension PlayerDetailsView {
+extension PlayerDetailsViewCell {
     struct ViewState {
         let playerId: Int?
         let name: String?
