@@ -36,13 +36,12 @@ class PlayerStatsViewController: UITableViewController, StoryboardLoading {
     
     override func loadView() {
         super.loadView()
+        title = "Player Stats"
         registerCells()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Player Stats"
-        navigationController?.navigationBar.prefersLargeTitles = true
         loadStats()
     }
     
