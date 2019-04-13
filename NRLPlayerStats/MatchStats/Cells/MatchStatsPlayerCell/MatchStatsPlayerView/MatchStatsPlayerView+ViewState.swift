@@ -12,13 +12,11 @@ extension MatchStatsPlayerView {
     struct ViewState {
         let name: String?
         let position: String?
-        let jumberNumber: String?
         let statValue: String?
         
         init(player: LeagueStat.Team.Player? = nil) {
             name = player?.shortName
-            position = player?.position
-            jumberNumber = String(optionalInt: player?.jumperNumber) + "."
+            position = String(optionalInt: player?.jumperNumber) + ". " + (player?.position ?? "")
             statValue = String(optionalInt: player?.statValue)
         }
     }

@@ -15,7 +15,6 @@
                 <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="MatchStatsRightPlayerView"/>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="jumperNumberLabel" destination="s9M-hQ-wT4" id="IfB-WO-ZUQ"/>
                 <outlet property="nameLabel" destination="DWv-Dz-8dr" id="YyJ-Bh-Hx1"/>
                 <outlet property="positionLabel" destination="3hd-Q5-KRk" id="BO8-7W-HVN"/>
                 <outlet property="statValueLabel" destination="JIy-4Y-Y0W" id="jDO-na-708"/>
@@ -31,28 +30,23 @@
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="LyC-ov-hsi" secondAttribute="height" id="aVO-kA-W3s"/>
+                        <constraint firstAttribute="width" constant="40" id="wgj-gq-5pY"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="01." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9M-hQ-wT4">
-                    <rect key="frame" x="296" y="34" width="16.5" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Position" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="3hd-Q5-KRk">
+                    <rect key="frame" x="316.5" y="34" width="45.5" height="14.5"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Position" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hd-Q5-KRk">
-                    <rect key="frame" x="316.5" y="34" width="45.5" height="18"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Short Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWv-Dz-8dr">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Short Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DWv-Dz-8dr">
                     <rect key="frame" x="266.5" y="12" width="95.5" height="20"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIy-4Y-Y0W">
-                    <rect key="frame" x="12" y="12" width="22.5" height="40"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="JIy-4Y-Y0W">
+                    <rect key="frame" x="6" y="12" width="22.5" height="40"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -60,23 +54,19 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="3hd-Q5-KRk" firstAttribute="bottom" secondItem="s9M-hQ-wT4" secondAttribute="bottom" id="1DA-Gz-2OU"/>
                 <constraint firstAttribute="bottom" secondItem="LyC-ov-hsi" secondAttribute="bottom" constant="12" id="1WK-Kr-AQ0"/>
                 <constraint firstItem="JIy-4Y-Y0W" firstAttribute="top" secondItem="WHS-AL-U8b" secondAttribute="top" constant="12" id="7MU-Dc-bkU"/>
                 <constraint firstItem="LyC-ov-hsi" firstAttribute="leading" secondItem="DWv-Dz-8dr" secondAttribute="trailing" constant="8" id="9m8-Ns-AKR"/>
                 <constraint firstItem="LyC-ov-hsi" firstAttribute="top" secondItem="WHS-AL-U8b" secondAttribute="top" constant="12" id="Bvh-MR-M5I"/>
                 <constraint firstItem="DWv-Dz-8dr" firstAttribute="bottom" secondItem="WHS-AL-U8b" secondAttribute="centerY" id="Csk-sL-w40"/>
-                <constraint firstItem="s9M-hQ-wT4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JIy-4Y-Y0W" secondAttribute="trailing" constant="12" id="G7R-Hz-UjS"/>
                 <constraint firstItem="LyC-ov-hsi" firstAttribute="leading" secondItem="3hd-Q5-KRk" secondAttribute="trailing" constant="8" id="Ivs-0b-bBH"/>
                 <constraint firstItem="DWv-Dz-8dr" firstAttribute="top" secondItem="LyC-ov-hsi" secondAttribute="top" id="JWR-BF-Nbj"/>
-                <constraint firstItem="JIy-4Y-Y0W" firstAttribute="leading" secondItem="tkC-tN-ve3" secondAttribute="leading" constant="12" id="Je3-JI-dlA"/>
+                <constraint firstItem="JIy-4Y-Y0W" firstAttribute="leading" secondItem="tkC-tN-ve3" secondAttribute="leading" constant="6" id="Je3-JI-dlA"/>
+                <constraint firstItem="3hd-Q5-KRk" firstAttribute="top" secondItem="DWv-Dz-8dr" secondAttribute="bottom" constant="2" id="MEw-E3-zRl"/>
+                <constraint firstItem="3hd-Q5-KRk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JIy-4Y-Y0W" secondAttribute="trailing" constant="12" id="N5f-fK-Vv5"/>
                 <constraint firstAttribute="bottom" secondItem="JIy-4Y-Y0W" secondAttribute="bottom" constant="12" id="NLr-nz-qID"/>
-                <constraint firstItem="s9M-hQ-wT4" firstAttribute="top" secondItem="DWv-Dz-8dr" secondAttribute="bottom" constant="2" id="Ops-MC-Le0"/>
                 <constraint firstItem="DWv-Dz-8dr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JIy-4Y-Y0W" secondAttribute="trailing" constant="12" id="T3d-4x-Y3W"/>
                 <constraint firstItem="tkC-tN-ve3" firstAttribute="trailing" secondItem="LyC-ov-hsi" secondAttribute="trailing" constant="12" id="lop-3e-gkk"/>
-                <constraint firstItem="3hd-Q5-KRk" firstAttribute="leading" secondItem="s9M-hQ-wT4" secondAttribute="trailing" constant="4" id="my7-AK-rA0"/>
-                <constraint firstItem="3hd-Q5-KRk" firstAttribute="top" secondItem="s9M-hQ-wT4" secondAttribute="top" id="vqq-mh-Gif"/>
-                <constraint firstItem="s9M-hQ-wT4" firstAttribute="bottom" secondItem="LyC-ov-hsi" secondAttribute="bottom" id="zcu-SZ-Bzq"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

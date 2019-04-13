@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,18 +15,18 @@
             <rect key="frame" x="0.0" y="0.0" width="666" height="111"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jpt-nb-liD" id="SFw-UB-d6g">
-                <rect key="frame" x="0.0" y="0.0" width="666" height="110.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="666" height="110.66666666666667"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R87-Pt-lIn" customClass="MatchStatsLeftPlayerView" customModule="NRLPlayerStats" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="333" height="110.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="333" height="110.66666666666667"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="MatchStatsLeftPlayerView"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHp-NT-VTW" customClass="MatchStatsRightPlayerView" customModule="NRLPlayerStats" customModuleProvider="target">
-                        <rect key="frame" x="333" y="0.0" width="333" height="110.5"/>
+                        <rect key="frame" x="333" y="0.0" width="333" height="110.66666666666667"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="MatchStatsRightPlayerView"/>
