@@ -39,5 +39,9 @@ extension MatchStatsViewController {
             let playerB = stat.teamB.topPlayers.element(at: indexPath.row)
             return (playerA, playerB)
         }
+        
+        func statType(at indexPath: IndexPath) -> LeagueStat.StatType {
+            return leagueStats.element(at: indexPath.section)?.type ?? .tackles
+        }
     }
 }

@@ -28,6 +28,15 @@ struct StatsAPI: API {
         
         return components
     }
-    
-    
+}
+
+extension StatsAPI {
+    // Normally this will live in its own API and loader,
+    // but for the purpose of this project, async image view takes care of most of the work.
+    static func getMediaUrl(playerId: Int) -> URL? {
+        var urlString = "https://media.foxsports.com.au/match-centre/includes/images/headshots/nrl"
+        urlString = urlString.stringByAppendingPathComponent("\(playerId)")
+        urlString = urlString.appendPathExtension("jpg") ?? ""
+        return URL(string: urlString)
+    }
 }

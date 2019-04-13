@@ -10,10 +10,16 @@ import Foundation
 
 extension MatchStatsPlayerCell {
     struct ViewState {
+        let statType: LeagueStat.StatType
         let playerA: LeagueStat.Team.Player?
         let playerB: LeagueStat.Team.Player?
         
-        init(playerA: LeagueStat.Team.Player? = nil, playerB: LeagueStat.Team.Player? = nil) {
+        init(
+            statType: LeagueStat.StatType = .tackles,
+            playerA: LeagueStat.Team.Player? = nil,
+            playerB: LeagueStat.Team.Player? = nil)
+        {
+            self.statType = statType
             self.playerA = playerA
             self.playerB = playerB
         }

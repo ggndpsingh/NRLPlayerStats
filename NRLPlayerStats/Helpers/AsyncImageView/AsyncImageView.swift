@@ -10,7 +10,7 @@ import UIKit
 import Nuke
 
 @IBDesignable
-class AsyncImageView: UIView {
+class AsyncImageView: XibView {
 
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var spinner: UIActivityIndicatorView!
@@ -45,9 +45,10 @@ class AsyncImageView: UIView {
     private func load(from url: URL) {
         spinner.startAnimating()
         var options = ImageLoadingOptions.shared
-        options.contentModes = ImageLoadingOptions.ContentModes.init(success: .scaleToFill, failure: .scaleToFill, placeholder: .scaleToFill)
+        let placeholder = UIImage(named: "headshot-blank")
+        options.contentModes = ImageLoadingOptions.ContentModes.init(success: .scaleAspectFill, failure: .scaleAspectFill, placeholder: .scaleAspectFill)
         Nuke.loadImage(with: url, options: options, into: imageView, progress: nil) { [weak self] response, _ in
-            self?.imageView.image = response?.image
+            self?.imageView.image = response?.image ?? placeholder
             self?.spinner.stopAnimating()
         }
     }

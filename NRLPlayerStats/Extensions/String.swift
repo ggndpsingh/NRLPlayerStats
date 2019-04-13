@@ -16,6 +16,10 @@ extension String {
     func stringByAppendingPathComponent(_ component: String) -> String {
         return asNSString.appendingPathComponent(component)
     }
+    
+    func appendPathExtension(_ pathExtension: String) -> String? {
+        return asNSString.appendingPathExtension(pathExtension)
+    }
 }
 
 extension String {

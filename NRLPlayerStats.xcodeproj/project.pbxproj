@@ -39,6 +39,7 @@
 		CEC9806122619F0F0011858C /* AsyncImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC9805F22619F0F0011858C /* AsyncImageView.xib */; };
 		CEC9806222619F0F0011858C /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9806022619F0F0011858C /* AsyncImageView.swift */; };
 		CEC9806422619FA70011858C /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC9806322619FA70011858C /* Nuke.framework */; };
+		CEC980682261A5A10011858C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC980672261A5A10011858C /* Media.xcassets */; };
 		CED4532822615C4A0021333B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532722615C4A0021333B /* AppDelegate.swift */; };
 		CED4532A22615C4A0021333B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532922615C4A0021333B /* ViewController.swift */; };
 		CED4532D22615C4A0021333B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4532B22615C4A0021333B /* Main.storyboard */; };
@@ -90,6 +91,7 @@
 		CEC9805F22619F0F0011858C /* AsyncImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AsyncImageView.xib; sourceTree = "<group>"; };
 		CEC9806022619F0F0011858C /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		CEC9806322619FA70011858C /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
+		CEC980672261A5A10011858C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		CED4532422615C4A0021333B /* NRLPlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRLPlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4532722615C4A0021333B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED4532922615C4A0021333B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				CED4533022615C4B0021333B /* LaunchScreen.storyboard */,
 				CED4533322615C4B0021333B /* Info.plist */,
 				CEC9803F226187A20011858C /* Helpers */,
+				CEC980672261A5A10011858C /* Media.xcassets */,
 			);
 			path = NRLPlayerStats;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 			files = (
 				CEC9806122619F0F0011858C /* AsyncImageView.xib in Resources */,
 				CEC9803D2261877C0011858C /* MatchStatsLeftPlayerView.xib in Resources */,
+				CEC980682261A5A10011858C /* Media.xcassets in Resources */,
 				CED4533222615C4B0021333B /* LaunchScreen.storyboard in Resources */,
 				CED4532F22615C4B0021333B /* Assets.xcassets in Resources */,
 				CEC98047226188970011858C /* MatchStatsRightPlayerView.xib in Resources */,

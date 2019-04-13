@@ -70,13 +70,22 @@ extension LeagueStat {
         var title: String {
             switch self {
             case .tackles:
-                return "🤸‍♂️ Tackles"
+                return "🤸‍♂️ Most Tackles"
             case .runs:
-                return "🏃‍♂️Runs"
+                return "🏃‍♂️ Most Runs"
             case .fantasyPoints:
-                return "💯 Fantasy Points"
+                return "💯 Most Fantasy Points"
             case .runMeters:
-                return "📏 Run Meters"
+                return "📏 Most Distance Run"
+            }
+        }
+        
+        var statValuePostfix: String {
+            switch self {
+            case .runMeters:
+                return "m"
+            default:
+                return ""
             }
         }
     }
