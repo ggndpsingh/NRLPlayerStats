@@ -31,6 +31,7 @@ class MatchStatsViewController: UITableViewController {
         super.loadView()
         title = "Match Stats"
         registerCells()
+        setupRefreshControl()
     }
     
     override func viewDidLoad() {
@@ -42,8 +43,16 @@ class MatchStatsViewController: UITableViewController {
         tableView.registerCell(MatchStatsPlayerCell.self)
     }
     
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(loadStats), for: .valueChanged)
+    }
+    
+    @objc
     private func loadStats() {
         statsLoader?.request { [weak self] result in
+            self?.refreshControl?.endRefreshing()
+            
             switch result {
             case .success(let stats):
                 self?.viewState = .init(stats: stats)

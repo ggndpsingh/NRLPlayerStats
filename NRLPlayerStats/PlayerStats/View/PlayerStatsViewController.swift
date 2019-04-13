@@ -40,6 +40,7 @@ class PlayerStatsViewController: UITableViewController {
         super.loadView()
         title = "Player Stats"
         registerCells()
+        setupRefreshControl()
     }
     
     override func viewDidLoad() {
@@ -52,20 +53,37 @@ class PlayerStatsViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: statCellIdentifier)
     }
     
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(loadStats), for: .valueChanged)
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         self.tableView.tableHeaderView?.layoutIfNeeded()
     }
     
+    @objc
     private func loadStats() {
         statsLoader?.request { [weak self] result in
+            self?.refreshControl?.endRefreshing()
+            
             switch result {
             case .success(let player):
                 self?.player = player
-            case .failure(let error):
-                print(error)
+            case .failure:
+                self?.showFailureAlert()
             }
         }
+    }
+    
+    private func showFailureAlert() {
+        let alert = UIAlertController(title: "Error", message: "Failed to load player stats 😞", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .cancel) { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(ok)
+        present(alert, animated: true)
     }
 }
 
