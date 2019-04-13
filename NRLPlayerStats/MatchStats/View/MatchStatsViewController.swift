@@ -91,8 +91,8 @@ extension MatchStatsViewController: MatchStatsPlayerCellDelegate {
     }
     
     private func presentPlayerStats(teamId: Int, playerId: Int) {
-        let playervc = PlayerStatsViewController()
-        playervc.player = .init(teamId: teamId, playerId: playerId)
+        let playervc = PlayerStatsViewController.render()
+        playervc.details = (teamId, playerId)
         navigationController?.pushViewController(playervc, animated: true)
     }
 }
