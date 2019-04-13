@@ -14,6 +14,12 @@
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="MatchStatsRightPlayerView"/>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="jumperNumberLabel" destination="s9M-hQ-wT4" id="IfB-WO-ZUQ"/>
+                <outlet property="nameLabel" destination="DWv-Dz-8dr" id="YyJ-Bh-Hx1"/>
+                <outlet property="positionLabel" destination="3hd-Q5-KRk" id="BO8-7W-HVN"/>
+                <outlet property="statValueLabel" destination="JIy-4Y-Y0W" id="jDO-na-708"/>
+            </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="WHS-AL-U8b">
@@ -40,16 +46,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Short Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWv-Dz-8dr">
-                    <rect key="frame" x="280" y="12" width="82" height="20"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <rect key="frame" x="266.5" y="12" width="95.5" height="20"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIy-4Y-Y0W">
-                    <rect key="frame" x="12" y="12" width="24" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="24" id="St5-RW-ZBF"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIy-4Y-Y0W">
+                    <rect key="frame" x="12" y="12" width="22.5" height="40"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

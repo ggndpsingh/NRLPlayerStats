@@ -10,6 +10,6 @@ import Foundation
 import UIKit
 
 @IBDesignable
-class MatchStatsRightPlayerView: XibView {
+class MatchStatsRightPlayerView: MatchStatsPlayerView {
     
 }

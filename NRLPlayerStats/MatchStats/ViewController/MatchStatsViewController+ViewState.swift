@@ -32,5 +32,12 @@ extension MatchStatsViewController {
             guard let stat = leagueStats.element(at: index) else { return nil }
             return stat.type.title
         }
+        
+        func players(at indexPath: IndexPath) -> (LeagueStat.Team.Player?, LeagueStat.Team.Player?) {
+            guard let stat = leagueStats.element(at: indexPath.section) else { return (nil, nil) }
+            let playerA = stat.teamA.topPlayers.element(at: indexPath.row)
+            let playerB = stat.teamB.topPlayers.element(at: indexPath.row)
+            return (playerA, playerB)
+        }
     }
 }

@@ -26,4 +26,12 @@ extension String {
         }
         self = int < 10 ? "0\(int)" : "\(int)"
     }
+    
+    init(optionalInt: Int?) {
+        guard let int = optionalInt else {
+            self = ""
+            return
+        }
+        self = "\(int)"
+    }
 }
