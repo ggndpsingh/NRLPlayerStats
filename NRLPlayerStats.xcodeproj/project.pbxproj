@@ -54,7 +54,6 @@
 		CEC9807B2261CA990011858C /* PlayerDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9807A2261CA990011858C /* PlayerDetailsViewCell.swift */; };
 		CEC9807D2261CA9E0011858C /* PlayerDetailsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC9807C2261CA9E0011858C /* PlayerDetailsViewCell.xib */; };
 		CED4532822615C4A0021333B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532722615C4A0021333B /* AppDelegate.swift */; };
-		CED4532A22615C4A0021333B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532922615C4A0021333B /* ViewController.swift */; };
 		CED4532D22615C4A0021333B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4532B22615C4A0021333B /* Main.storyboard */; };
 		CED4532F22615C4B0021333B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED4532E22615C4B0021333B /* Assets.xcassets */; };
 		CED4533222615C4B0021333B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4533022615C4B0021333B /* LaunchScreen.storyboard */; };
@@ -120,7 +119,6 @@
 		CEC9807C2261CA9E0011858C /* PlayerDetailsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDetailsViewCell.xib; sourceTree = "<group>"; };
 		CED4532422615C4A0021333B /* NRLPlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRLPlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4532722615C4A0021333B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CED4532922615C4A0021333B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CED4532C22615C4A0021333B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CED4532E22615C4B0021333B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CED4533122615C4B0021333B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -166,6 +164,15 @@
 				CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE78DA502261FAB900F9DA1F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE78DA432261F26400F9DA1F /* PlayerDetailsStatCell.swift */,
+				CE78DA452261F2AD00F9DA1F /* PlayerDetailsStatCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CEC97FE92261609F0011858C /* Frameworks */ = {
@@ -343,8 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC980732261BFE20011858C /* PlayerStatsViewController.swift */,
-				CE78DA432261F26400F9DA1F /* PlayerDetailsStatCell.swift */,
-				CE78DA452261F2AD00F9DA1F /* PlayerDetailsStatCell.xib */,
+				CE78DA502261FAB900F9DA1F /* Cell */,
 				CEC980792261CA850011858C /* PlayerDetailsView */,
 			);
 			path = View;
@@ -389,7 +395,6 @@
 				CEC980362261877C0011858C /* MatchStats */,
 				CEC980692261B0690011858C /* PlayerStats */,
 				CED4532722615C4A0021333B /* AppDelegate.swift */,
-				CED4532922615C4A0021333B /* ViewController.swift */,
 				CED4532B22615C4A0021333B /* Main.storyboard */,
 				CED4532E22615C4B0021333B /* Assets.xcassets */,
 				CED4533022615C4B0021333B /* LaunchScreen.storyboard */,
@@ -569,7 +574,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC9803E2261877C0011858C /* MatchStatsLeftPlayerView.swift in Sources */,
-				CED4532A22615C4A0021333B /* ViewController.swift in Sources */,
 				CEC9804C226189570011858C /* MatchStatsPlayerCell.swift in Sources */,
 				CEC97FF42261614F0011858C /* APIError.swift in Sources */,
 				CEC98012226175FD0011858C /* StatsLoader.swift in Sources */,
