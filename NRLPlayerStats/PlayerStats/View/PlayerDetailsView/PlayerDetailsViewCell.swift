@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 
 class PlayerDetailsViewCell: UITableViewCell, NibLoading {
-    @IBOutlet private var headshotView: AsyncImageView!
+    @IBOutlet private var headshotView: AsyncImageView! {
+        didSet { headshotView.isRound = true }
+    }
     @IBOutlet private var nameLabel: UILabel!
     @IBOutlet private var positionLabel: UILabel!
     
@@ -28,7 +30,6 @@ class PlayerDetailsViewCell: UITableViewCell, NibLoading {
             return
         }
         
-        headshotView.isRound = true
         headshotView.url = StatsAPI.getMediaUrl(playerId: id)
     }
 }
