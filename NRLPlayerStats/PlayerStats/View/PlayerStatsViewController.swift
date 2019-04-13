@@ -50,7 +50,7 @@ class PlayerStatsViewController: UITableViewController {
     
     private func registerCells() {
         tableView.registerCell(PlayerDetailsViewCell.self)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: statCellIdentifier)
+        tableView.registerCell(PlayerDetailsStatCell.self)
     }
     
     private func setupRefreshControl() {
@@ -105,7 +105,7 @@ extension PlayerStatsViewController {
             }
             return cell
         default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: statCellIdentifier, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: PlayerDetailsStatCell.reuseIdentifier, for: indexPath)
             cell.textLabel?.text = viewState.title(at: indexPath)
             cell.detailTextLabel?.text = viewState.value(at: indexPath)
             return cell

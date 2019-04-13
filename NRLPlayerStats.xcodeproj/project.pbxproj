@@ -10,6 +10,8 @@
 		CE78DA3C2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */; };
 		CE78DA402261E58F00F9DA1F /* MatchSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA3F2261E58F00F9DA1F /* MatchSelectionViewController.swift */; };
 		CE78DA422261E5A700F9DA1F /* MatchSelectionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA412261E5A700F9DA1F /* MatchSelectionContentView.swift */; };
+		CE78DA442261F26400F9DA1F /* PlayerDetailsStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA432261F26400F9DA1F /* PlayerDetailsStatCell.swift */; };
+		CE78DA462261F2AD00F9DA1F /* PlayerDetailsStatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE78DA452261F2AD00F9DA1F /* PlayerDetailsStatCell.xib */; };
 		CEC97FF32261614F0011858C /* APIRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FEF2261614F0011858C /* APIRequestBuilder.swift */; };
 		CEC97FF42261614F0011858C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FF02261614F0011858C /* APIError.swift */; };
 		CEC97FF52261614F0011858C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FF12261614F0011858C /* API.swift */; };
@@ -69,6 +71,8 @@
 		CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerStatsViewController+ViewState.swift"; sourceTree = "<group>"; };
 		CE78DA3F2261E58F00F9DA1F /* MatchSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSelectionViewController.swift; sourceTree = "<group>"; };
 		CE78DA412261E5A700F9DA1F /* MatchSelectionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSelectionContentView.swift; sourceTree = "<group>"; };
+		CE78DA432261F26400F9DA1F /* PlayerDetailsStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsStatCell.swift; sourceTree = "<group>"; };
+		CE78DA452261F2AD00F9DA1F /* PlayerDetailsStatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDetailsStatCell.xib; sourceTree = "<group>"; };
 		CEC97FEF2261614F0011858C /* APIRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestBuilder.swift; sourceTree = "<group>"; };
 		CEC97FF02261614F0011858C /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		CEC97FF12261614F0011858C /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -331,6 +335,8 @@
 			isa = PBXGroup;
 			children = (
 				CEC980732261BFE20011858C /* PlayerStatsViewController.swift */,
+				CE78DA432261F26400F9DA1F /* PlayerDetailsStatCell.swift */,
+				CE78DA452261F2AD00F9DA1F /* PlayerDetailsStatCell.xib */,
 				CEC980792261CA850011858C /* PlayerDetailsView */,
 			);
 			path = View;
@@ -478,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC9806122619F0F0011858C /* AsyncImageView.xib in Resources */,
+				CE78DA462261F2AD00F9DA1F /* PlayerDetailsStatCell.xib in Resources */,
 				CEC9803D2261877C0011858C /* MatchStatsLeftPlayerView.xib in Resources */,
 				CEC980682261A5A10011858C /* Media.xcassets in Resources */,
 				CED4533222615C4B0021333B /* LaunchScreen.storyboard in Resources */,
@@ -557,6 +564,7 @@
 				CEC9807B2261CA990011858C /* PlayerDetailsViewCell.swift in Sources */,
 				CEC9805522618C340011858C /* MatchStatsViewController+ViewState.swift in Sources */,
 				CEC9804F22618A650011858C /* MatchStatsViewController.swift in Sources */,
+				CE78DA442261F26400F9DA1F /* PlayerDetailsStatCell.swift in Sources */,
 				CEC980742261BFE20011858C /* PlayerStatsViewController.swift in Sources */,
 				CEC97FF52261614F0011858C /* API.swift in Sources */,
 			);
