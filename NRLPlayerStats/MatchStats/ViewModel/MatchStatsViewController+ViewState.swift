@@ -19,6 +19,14 @@ extension MatchStatsViewController {
             leagueStats = stats
         }
         
+        var title: String? {
+            guard
+                let teamA = leagueStats.first?.teamA.name,
+                let teamB = leagueStats.first?.teamB.name
+            else { return nil }
+            return teamA + " - " + teamB
+        }
+        
         var numberOfSections: Int {
             return leagueStats.count
         }

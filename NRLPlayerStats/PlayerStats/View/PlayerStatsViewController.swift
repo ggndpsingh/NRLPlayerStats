@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class PlayerStatsViewController: UITableViewController, StoryboardLoading {
+class PlayerStatsViewController: UITableViewController {
+    private let statCellIdentifier = "PlayerStatCell"
+    
     var details: (Int, Int)? = nil {
         didSet {
             guard let (teamId, playerId) = details else { return }
@@ -36,18 +38,24 @@ class PlayerStatsViewController: UITableViewController, StoryboardLoading {
     
     override func loadView() {
         super.loadView()
+        title = "Player Stats"
         registerCells()
+        setupRefreshControl()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Player Stats"
-        navigationController?.navigationBar.prefersLargeTitles = true
         loadStats()
     }
     
     private func registerCells() {
         tableView.registerCell(PlayerDetailsViewCell.self)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: statCellIdentifier)
+    }
+    
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(loadStats), for: .valueChanged)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -55,15 +63,27 @@ class PlayerStatsViewController: UITableViewController, StoryboardLoading {
         self.tableView.tableHeaderView?.layoutIfNeeded()
     }
     
+    @objc
     private func loadStats() {
         statsLoader?.request { [weak self] result in
+            self?.refreshControl?.endRefreshing()
+            
             switch result {
             case .success(let player):
                 self?.player = player
-            case .failure(let error):
-                print(error)
+            case .failure:
+                self?.showFailureAlert()
             }
         }
+    }
+    
+    private func showFailureAlert() {
+        let alert = UIAlertController(title: "Error", message: "Failed to load player stats 😞", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .cancel) { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(ok)
+        present(alert, animated: true)
     }
 }
 
@@ -85,7 +105,7 @@ extension PlayerStatsViewController {
             }
             return cell
         default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "statCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: statCellIdentifier, for: indexPath)
             cell.textLabel?.text = viewState.title(at: indexPath)
             cell.detailTextLabel?.text = viewState.value(at: indexPath)
             return cell

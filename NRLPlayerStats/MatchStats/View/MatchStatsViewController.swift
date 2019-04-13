@@ -11,7 +11,7 @@ import UIKit
 
 class MatchStatsViewController: UITableViewController {
     
-    var match: Match = .init() {
+    var match: MatchSelectionViewController.Match = .init() {
         didSet {
             let endpoint: StatsEndpoint = .match(match.year, match.round, match.game)
             statsLoader = .init(endpoint: endpoint)
@@ -22,33 +22,53 @@ class MatchStatsViewController: UITableViewController {
     
     private var viewState: ViewState = .init() {
         didSet {
+            title = viewState.title
             tableView.reloadData()
         }
     }
     
     override func loadView() {
         super.loadView()
+        title = "Match Stats"
         registerCells()
+        setupRefreshControl()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Match Stats"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
-        match = Match()
-        statsLoader?.request { [weak self] result in
-            switch result {
-            case .success(let stats):
-                self?.viewState = .init(stats: stats)
-            default:
-                break
-            }
-        }
+        loadStats()
     }
     
     private func registerCells() {
         tableView.registerCell(MatchStatsPlayerCell.self)
+    }
+    
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(loadStats), for: .valueChanged)
+    }
+    
+    @objc
+    private func loadStats() {
+        statsLoader?.request { [weak self] result in
+            self?.refreshControl?.endRefreshing()
+            
+            switch result {
+            case .success(let stats):
+                self?.viewState = .init(stats: stats)
+            default:
+                self?.showFailureAlert()
+            }
+        }
+    }
+    
+    private func showFailureAlert() {
+        let alert = UIAlertController(title: "Error", message: "No stats found for this match 😞", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .cancel) { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(ok)
+        present(alert, animated: true)
     }
 }
 
@@ -91,22 +111,8 @@ extension MatchStatsViewController: MatchStatsPlayerCellDelegate {
     }
     
     private func presentPlayerStats(teamId: Int, playerId: Int) {
-        let playervc = PlayerStatsViewController.render()
+        let playervc = PlayerStatsViewController()
         playervc.details = (teamId, playerId)
         navigationController?.pushViewController(playervc, animated: true)
-    }
-}
-
-extension MatchStatsViewController {
-    struct Match {
-        let year: Int
-        let round: Int
-        let game: Int
-        
-        init(year: Int = 2017, round: Int = 1, match: Int = 1) {
-            self.year = year
-            self.round = round
-            self.game = match
-        }
     }
 }
