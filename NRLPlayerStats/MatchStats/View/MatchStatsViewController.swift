@@ -65,8 +65,10 @@ extension MatchStatsViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: MatchStatsPlayerCell.reuseIdentifier, for: indexPath)
         if let statCell = cell as? MatchStatsPlayerCell {
             let statType = viewState.statType(at: indexPath)
+            let teamsIds = viewState.teamsIds(at: indexPath)
             let players = viewState.players(at: indexPath)
-            statCell.viewState = .init(statType: statType, playerA: players.0, playerB: players.1)
+            statCell.viewState = .init(statType: statType, teams: teamsIds, players: players)
+            statCell.delegate = self
         }
         
         return cell
@@ -80,6 +82,18 @@ extension MatchStatsViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewState.titleForSection(at: section)
+    }
+}
+
+extension MatchStatsViewController: MatchStatsPlayerCellDelegate {
+    func matchStatsPlayerCell(_ cell: MatchStatsPlayerCell, didTapOnHeadshot playerId: Int, teamId: Int) {
+        presentPlayerStats(teamId: teamId, playerId: playerId)
+    }
+    
+    private func presentPlayerStats(teamId: Int, playerId: Int) {
+        let playervc = PlayerStatsViewController.render()
+        playervc.details = (teamId, playerId)
+        navigationController?.pushViewController(playervc, animated: true)
     }
 }
 

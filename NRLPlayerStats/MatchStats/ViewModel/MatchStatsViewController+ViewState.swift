@@ -40,6 +40,11 @@ extension MatchStatsViewController {
             return (playerA, playerB)
         }
         
+        func teamsIds(at indexPath: IndexPath) -> (Int?, Int?) {
+            guard let stat = leagueStats.element(at: indexPath.section) else { return (nil, nil) }
+            return (stat.teamA.id, stat.teamB.id)
+        }
+        
         func statType(at indexPath: IndexPath) -> LeagueStat.StatType {
             return leagueStats.element(at: indexPath.section)?.type ?? .tackles
         }
