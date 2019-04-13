@@ -10,5 +10,13 @@ import Foundation
 import UIKit
 
 class MatchStatsPlayerCell: UITableViewCell, NibLoading {
+    @IBOutlet private var leftPlayerView: MatchStatsPlayerView!
+    @IBOutlet private var rightPlayerView: MatchStatsPlayerView!
     
+    var viewState: ViewState = .init() {
+        didSet {
+            leftPlayerView.viewState  = .init(player: viewState.playerA)
+            rightPlayerView.viewState = .init(player: viewState.playerB)
+        }
+    }
 }

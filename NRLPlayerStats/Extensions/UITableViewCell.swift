@@ -1,5 +1,5 @@
 //
-//  MatchStatsLeftPlayerView.swift
+//  UITableViewCell.swift
 //  NRLPlayerStats
 //
 //  Created by Gagandeep Singh on 13/4/19.
@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-@IBDesignable
-class MatchStatsLeftPlayerView: MatchStatsPlayerView {
-    
+extension UITableViewCell {
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
 }

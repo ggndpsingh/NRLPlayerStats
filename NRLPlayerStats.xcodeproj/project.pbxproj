@@ -19,7 +19,7 @@
 		CEC9800C22616A040011858C /* StatsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9800922616A040011858C /* StatsAPI.swift */; };
 		CEC9800D22616A040011858C /* StatsAPIHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9800A22616A040011858C /* StatsAPIHost.swift */; };
 		CEC98010226173160011858C /* LeagueStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9800F226173160011858C /* LeagueStat.swift */; };
-		CEC98012226175FD0011858C /* StatLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98011226175FD0011858C /* StatLoader.swift */; };
+		CEC98012226175FD0011858C /* StatsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98011226175FD0011858C /* StatsLoader.swift */; };
 		CEC9803D2261877C0011858C /* MatchStatsLeftPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC9803B2261877C0011858C /* MatchStatsLeftPlayerView.xib */; };
 		CEC9803E2261877C0011858C /* MatchStatsLeftPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9803C2261877C0011858C /* MatchStatsLeftPlayerView.swift */; };
 		CEC98042226187A20011858C /* NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98040226187A20011858C /* NibLoading.swift */; };
@@ -28,6 +28,14 @@
 		CEC98048226188970011858C /* MatchStatsRightPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98046226188970011858C /* MatchStatsRightPlayerView.swift */; };
 		CEC9804B226189570011858C /* MatchStatsPlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC98049226189560011858C /* MatchStatsPlayerCell.xib */; };
 		CEC9804C226189570011858C /* MatchStatsPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9804A226189560011858C /* MatchStatsPlayerCell.swift */; };
+		CEC9804F22618A650011858C /* MatchStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9804E22618A650011858C /* MatchStatsViewController.swift */; };
+		CEC9805122618B410011858C /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805022618B410011858C /* UITableView.swift */; };
+		CEC9805322618B500011858C /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805222618B500011858C /* UITableViewCell.swift */; };
+		CEC9805522618C340011858C /* MatchStatsViewController+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805422618C340011858C /* MatchStatsViewController+ViewState.swift */; };
+		CEC9805722618CBD0011858C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805622618CBD0011858C /* Array.swift */; };
+		CEC98059226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98058226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift */; };
+		CEC9805B226194250011858C /* MatchStatsPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805A226194250011858C /* MatchStatsPlayerView.swift */; };
+		CEC9805D226194D80011858C /* MatchStatsPlayerView+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805C226194D80011858C /* MatchStatsPlayerView+ViewState.swift */; };
 		CED4532822615C4A0021333B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532722615C4A0021333B /* AppDelegate.swift */; };
 		CED4532A22615C4A0021333B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532922615C4A0021333B /* ViewController.swift */; };
 		CED4532D22615C4A0021333B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4532B22615C4A0021333B /* Main.storyboard */; };
@@ -59,7 +67,7 @@
 		CEC9800922616A040011858C /* StatsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsAPI.swift; sourceTree = "<group>"; };
 		CEC9800A22616A040011858C /* StatsAPIHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsAPIHost.swift; sourceTree = "<group>"; };
 		CEC9800F226173160011858C /* LeagueStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueStat.swift; sourceTree = "<group>"; };
-		CEC98011226175FD0011858C /* StatLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatLoader.swift; sourceTree = "<group>"; };
+		CEC98011226175FD0011858C /* StatsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsLoader.swift; sourceTree = "<group>"; };
 		CEC9803B2261877C0011858C /* MatchStatsLeftPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchStatsLeftPlayerView.xib; sourceTree = "<group>"; };
 		CEC9803C2261877C0011858C /* MatchStatsLeftPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchStatsLeftPlayerView.swift; sourceTree = "<group>"; };
 		CEC98040226187A20011858C /* NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoading.swift; sourceTree = "<group>"; };
@@ -68,6 +76,14 @@
 		CEC98046226188970011858C /* MatchStatsRightPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchStatsRightPlayerView.swift; sourceTree = "<group>"; };
 		CEC98049226189560011858C /* MatchStatsPlayerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchStatsPlayerCell.xib; sourceTree = "<group>"; };
 		CEC9804A226189560011858C /* MatchStatsPlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchStatsPlayerCell.swift; sourceTree = "<group>"; };
+		CEC9804E22618A650011858C /* MatchStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchStatsViewController.swift; sourceTree = "<group>"; };
+		CEC9805022618B410011858C /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		CEC9805222618B500011858C /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		CEC9805422618C340011858C /* MatchStatsViewController+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchStatsViewController+ViewState.swift"; sourceTree = "<group>"; };
+		CEC9805622618CBD0011858C /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		CEC98058226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchStatsPlayerCell+ViewState.swift"; sourceTree = "<group>"; };
+		CEC9805A226194250011858C /* MatchStatsPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchStatsPlayerView.swift; sourceTree = "<group>"; };
+		CEC9805C226194D80011858C /* MatchStatsPlayerView+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchStatsPlayerView+ViewState.swift"; sourceTree = "<group>"; };
 		CED4532422615C4A0021333B /* NRLPlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRLPlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4532722615C4A0021333B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED4532922615C4A0021333B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,8 +139,11 @@
 		CEC98000226166B80011858C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CEC9805622618CBD0011858C /* Array.swift */,
 				CEC98002226166B80011858C /* Decodable.swift */,
 				CEC98003226166B80011858C /* String.swift */,
+				CEC9805022618B410011858C /* UITableView.swift */,
+				CEC9805222618B500011858C /* UITableViewCell.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -147,17 +166,18 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		CEC98013226176020011858C /* StatLoader */ = {
+		CEC98013226176020011858C /* StatsLoader */ = {
 			isa = PBXGroup;
 			children = (
-				CEC98011226175FD0011858C /* StatLoader.swift */,
+				CEC98011226175FD0011858C /* StatsLoader.swift */,
 			);
-			path = StatLoader;
+			path = StatsLoader;
 			sourceTree = "<group>";
 		};
 		CEC980362261877C0011858C /* MatchStats */ = {
 			isa = PBXGroup;
 			children = (
+				CEC9804D22618A4B0011858C /* ViewController */,
 				CEC980372261877C0011858C /* Cells */,
 			);
 			path = MatchStats;
@@ -175,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC9804A226189560011858C /* MatchStatsPlayerCell.swift */,
+				CEC98058226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift */,
 				CEC98049226189560011858C /* MatchStatsPlayerCell.xib */,
 				CEC980392261877C0011858C /* MatchStatsPlayerView */,
 			);
@@ -184,6 +205,8 @@
 		CEC980392261877C0011858C /* MatchStatsPlayerView */ = {
 			isa = PBXGroup;
 			children = (
+				CEC9805A226194250011858C /* MatchStatsPlayerView.swift */,
+				CEC9805C226194D80011858C /* MatchStatsPlayerView+ViewState.swift */,
 				CEC9803A2261877C0011858C /* Left */,
 				CEC98044226188970011858C /* Right */,
 			);
@@ -211,10 +234,19 @@
 		CEC98044226188970011858C /* Right */ = {
 			isa = PBXGroup;
 			children = (
-				CEC98045226188970011858C /* MatchStatsRightPlayerView.xib */,
 				CEC98046226188970011858C /* MatchStatsRightPlayerView.swift */,
+				CEC98045226188970011858C /* MatchStatsRightPlayerView.xib */,
 			);
 			path = Right;
+			sourceTree = "<group>";
+		};
+		CEC9804D22618A4B0011858C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEC9804E22618A650011858C /* MatchStatsViewController.swift */,
+				CEC9805422618C340011858C /* MatchStatsViewController+ViewState.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		CED4531B22615C4A0021333B = {
@@ -244,7 +276,7 @@
 				CEC9800722616A040011858C /* PlayerStatsAPI */,
 				CEC9800E226173160011858C /* Models */,
 				CED4532722615C4A0021333B /* AppDelegate.swift */,
-				CEC98013226176020011858C /* StatLoader */,
+				CEC98013226176020011858C /* StatsLoader */,
 				CEC980362261877C0011858C /* MatchStats */,
 				CED4532922615C4A0021333B /* ViewController.swift */,
 				CED4532B22615C4A0021333B /* Main.storyboard */,
@@ -396,19 +428,27 @@
 				CED4532A22615C4A0021333B /* ViewController.swift in Sources */,
 				CEC9804C226189570011858C /* MatchStatsPlayerCell.swift in Sources */,
 				CEC97FF42261614F0011858C /* APIError.swift in Sources */,
-				CEC98012226175FD0011858C /* StatLoader.swift in Sources */,
+				CEC98012226175FD0011858C /* StatsLoader.swift in Sources */,
 				CEC98006226166B80011858C /* String.swift in Sources */,
+				CEC9805D226194D80011858C /* MatchStatsPlayerView+ViewState.swift in Sources */,
+				CEC9805722618CBD0011858C /* Array.swift in Sources */,
+				CEC98059226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift in Sources */,
 				CEC9800B22616A040011858C /* StatsEndpoint.swift in Sources */,
 				CEC98043226187A20011858C /* XibView.swift in Sources */,
 				CEC9800D22616A040011858C /* StatsAPIHost.swift in Sources */,
 				CEC97FF32261614F0011858C /* APIRequestBuilder.swift in Sources */,
 				CEC98010226173160011858C /* LeagueStat.swift in Sources */,
 				CEC98048226188970011858C /* MatchStatsRightPlayerView.swift in Sources */,
+				CEC9805322618B500011858C /* UITableViewCell.swift in Sources */,
+				CEC9805B226194250011858C /* MatchStatsPlayerView.swift in Sources */,
 				CEC9800C22616A040011858C /* StatsAPI.swift in Sources */,
 				CED4532822615C4A0021333B /* AppDelegate.swift in Sources */,
 				CEC98042226187A20011858C /* NibLoading.swift in Sources */,
 				CEC98005226166B80011858C /* Decodable.swift in Sources */,
 				CEC97FF62261614F0011858C /* Endpoint.swift in Sources */,
+				CEC9805122618B410011858C /* UITableView.swift in Sources */,
+				CEC9805522618C340011858C /* MatchStatsViewController+ViewState.swift in Sources */,
+				CEC9804F22618A650011858C /* MatchStatsViewController.swift in Sources */,
 				CEC97FF52261614F0011858C /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
