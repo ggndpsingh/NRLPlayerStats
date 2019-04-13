@@ -26,6 +26,8 @@
 		CEC98043226187A20011858C /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98041226187A20011858C /* XibView.swift */; };
 		CEC98047226188970011858C /* MatchStatsRightPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC98045226188970011858C /* MatchStatsRightPlayerView.xib */; };
 		CEC98048226188970011858C /* MatchStatsRightPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98046226188970011858C /* MatchStatsRightPlayerView.swift */; };
+		CEC9804B226189570011858C /* MatchStatsPlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC98049226189560011858C /* MatchStatsPlayerCell.xib */; };
+		CEC9804C226189570011858C /* MatchStatsPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9804A226189560011858C /* MatchStatsPlayerCell.swift */; };
 		CED4532822615C4A0021333B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532722615C4A0021333B /* AppDelegate.swift */; };
 		CED4532A22615C4A0021333B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532922615C4A0021333B /* ViewController.swift */; };
 		CED4532D22615C4A0021333B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4532B22615C4A0021333B /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 		CEC98041226187A20011858C /* XibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		CEC98045226188970011858C /* MatchStatsRightPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchStatsRightPlayerView.xib; sourceTree = "<group>"; };
 		CEC98046226188970011858C /* MatchStatsRightPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchStatsRightPlayerView.swift; sourceTree = "<group>"; };
+		CEC98049226189560011858C /* MatchStatsPlayerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchStatsPlayerCell.xib; sourceTree = "<group>"; };
+		CEC9804A226189560011858C /* MatchStatsPlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchStatsPlayerCell.swift; sourceTree = "<group>"; };
 		CED4532422615C4A0021333B /* NRLPlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRLPlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4532722615C4A0021333B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED4532922615C4A0021333B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 		CEC980382261877C0011858C /* MatchStatsPlayerCell */ = {
 			isa = PBXGroup;
 			children = (
+				CEC9804A226189560011858C /* MatchStatsPlayerCell.swift */,
+				CEC98049226189560011858C /* MatchStatsPlayerCell.xib */,
 				CEC980392261877C0011858C /* MatchStatsPlayerView */,
 			);
 			path = MatchStatsPlayerCell;
@@ -345,6 +351,7 @@
 				CED4533222615C4B0021333B /* LaunchScreen.storyboard in Resources */,
 				CED4532F22615C4B0021333B /* Assets.xcassets in Resources */,
 				CEC98047226188970011858C /* MatchStatsRightPlayerView.xib in Resources */,
+				CEC9804B226189570011858C /* MatchStatsPlayerCell.xib in Resources */,
 				CED4532D22615C4A0021333B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +394,7 @@
 			files = (
 				CEC9803E2261877C0011858C /* MatchStatsLeftPlayerView.swift in Sources */,
 				CED4532A22615C4A0021333B /* ViewController.swift in Sources */,
+				CEC9804C226189570011858C /* MatchStatsPlayerCell.swift in Sources */,
 				CEC97FF42261614F0011858C /* APIError.swift in Sources */,
 				CEC98012226175FD0011858C /* StatLoader.swift in Sources */,
 				CEC98006226166B80011858C /* String.swift in Sources */,
