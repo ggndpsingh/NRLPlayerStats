@@ -66,5 +66,18 @@ extension LeagueStat {
         case runs
         case fantasyPoints = "fantasy_points"
         case runMeters = "run_metres"
+        
+        var title: String {
+            switch self {
+            case .tackles:
+                return "🤸‍♂️ Tackles"
+            case .runs:
+                return "🏃‍♂️Runs"
+            case .fantasyPoints:
+                return "💯 Fantasy Points"
+            case .runMeters:
+                return "📏 Run Meters"
+            }
+        }
     }
 }

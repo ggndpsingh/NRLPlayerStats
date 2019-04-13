@@ -1,5 +1,5 @@
 //
-//  StatLoader.swift
+//  StastLoader.swift
 //  NRLPlayerStats
 //
 //  Created by Gagandeep Singh on 13/4/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct StatLoader<T: Decodable> {
+struct StatsLoader<T: Decodable> {
     private let endpoint: Endpoint
     
     init(endpoint: Endpoint) {
