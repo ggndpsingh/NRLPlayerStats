@@ -64,8 +64,9 @@ extension MatchStatsViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MatchStatsPlayerCell.reuseIdentifier, for: indexPath)
         if let statCell = cell as? MatchStatsPlayerCell {
+            let statType = viewState.statType(at: indexPath)
             let players = viewState.players(at: indexPath)
-            statCell.viewState = MatchStatsPlayerCell.ViewState(playerA: players.0, playerB: players.1)
+            statCell.viewState = .init(statType: statType, playerA: players.0, playerB: players.1)
         }
         
         return cell

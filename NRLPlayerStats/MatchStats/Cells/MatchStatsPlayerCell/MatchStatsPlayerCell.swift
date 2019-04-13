@@ -15,8 +15,8 @@ class MatchStatsPlayerCell: UITableViewCell, NibLoading {
     
     var viewState: ViewState = .init() {
         didSet {
-            leftPlayerView.viewState  = .init(player: viewState.playerA)
-            rightPlayerView.viewState = .init(player: viewState.playerB)
+            leftPlayerView.viewState  = .init(statType: viewState.statType, player: viewState.playerA)
+            rightPlayerView.viewState = .init(statType: viewState.statType, player: viewState.playerB)
         }
     }
 }

@@ -36,6 +36,10 @@
 		CEC98059226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC98058226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift */; };
 		CEC9805B226194250011858C /* MatchStatsPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805A226194250011858C /* MatchStatsPlayerView.swift */; };
 		CEC9805D226194D80011858C /* MatchStatsPlayerView+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9805C226194D80011858C /* MatchStatsPlayerView+ViewState.swift */; };
+		CEC9806122619F0F0011858C /* AsyncImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC9805F22619F0F0011858C /* AsyncImageView.xib */; };
+		CEC9806222619F0F0011858C /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9806022619F0F0011858C /* AsyncImageView.swift */; };
+		CEC9806422619FA70011858C /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC9806322619FA70011858C /* Nuke.framework */; };
+		CEC980682261A5A10011858C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC980672261A5A10011858C /* Media.xcassets */; };
 		CED4532822615C4A0021333B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532722615C4A0021333B /* AppDelegate.swift */; };
 		CED4532A22615C4A0021333B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532922615C4A0021333B /* ViewController.swift */; };
 		CED4532D22615C4A0021333B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4532B22615C4A0021333B /* Main.storyboard */; };
@@ -84,6 +88,10 @@
 		CEC98058226192CE0011858C /* MatchStatsPlayerCell+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchStatsPlayerCell+ViewState.swift"; sourceTree = "<group>"; };
 		CEC9805A226194250011858C /* MatchStatsPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchStatsPlayerView.swift; sourceTree = "<group>"; };
 		CEC9805C226194D80011858C /* MatchStatsPlayerView+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchStatsPlayerView+ViewState.swift"; sourceTree = "<group>"; };
+		CEC9805F22619F0F0011858C /* AsyncImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AsyncImageView.xib; sourceTree = "<group>"; };
+		CEC9806022619F0F0011858C /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		CEC9806322619FA70011858C /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
+		CEC980672261A5A10011858C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		CED4532422615C4A0021333B /* NRLPlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRLPlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4532722615C4A0021333B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED4532922615C4A0021333B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC97FF8226161A90011858C /* Alamofire.framework in Frameworks */,
+				CEC9806422619FA70011858C /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +128,7 @@
 		CEC97FE92261609F0011858C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEC9806322619FA70011858C /* Nuke.framework */,
 				CEC97FF9226161B20011858C /* Shawshank.framework */,
 				CEC97FF7226161A90011858C /* Alamofire.framework */,
 			);
@@ -225,6 +235,7 @@
 		CEC9803F226187A20011858C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CEC9805E22619F0F0011858C /* AsyncImageView */,
 				CEC98040226187A20011858C /* NibLoading.swift */,
 				CEC98041226187A20011858C /* XibView.swift */,
 			);
@@ -247,6 +258,15 @@
 				CEC9805422618C340011858C /* MatchStatsViewController+ViewState.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CEC9805E22619F0F0011858C /* AsyncImageView */ = {
+			isa = PBXGroup;
+			children = (
+				CEC9806022619F0F0011858C /* AsyncImageView.swift */,
+				CEC9805F22619F0F0011858C /* AsyncImageView.xib */,
+			);
+			path = AsyncImageView;
 			sourceTree = "<group>";
 		};
 		CED4531B22615C4A0021333B = {
@@ -284,6 +304,7 @@
 				CED4533022615C4B0021333B /* LaunchScreen.storyboard */,
 				CED4533322615C4B0021333B /* Info.plist */,
 				CEC9803F226187A20011858C /* Helpers */,
+				CEC980672261A5A10011858C /* Media.xcassets */,
 			);
 			path = NRLPlayerStats;
 			sourceTree = "<group>";
@@ -379,7 +400,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC9806122619F0F0011858C /* AsyncImageView.xib in Resources */,
 				CEC9803D2261877C0011858C /* MatchStatsLeftPlayerView.xib in Resources */,
+				CEC980682261A5A10011858C /* Media.xcassets in Resources */,
 				CED4533222615C4B0021333B /* LaunchScreen.storyboard in Resources */,
 				CED4532F22615C4B0021333B /* Assets.xcassets in Resources */,
 				CEC98047226188970011858C /* MatchStatsRightPlayerView.xib in Resources */,
@@ -407,6 +430,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputFileListPaths = (
@@ -438,6 +462,7 @@
 				CEC9800D22616A040011858C /* StatsAPIHost.swift in Sources */,
 				CEC97FF32261614F0011858C /* APIRequestBuilder.swift in Sources */,
 				CEC98010226173160011858C /* LeagueStat.swift in Sources */,
+				CEC9806222619F0F0011858C /* AsyncImageView.swift in Sources */,
 				CEC98048226188970011858C /* MatchStatsRightPlayerView.swift in Sources */,
 				CEC9805322618B500011858C /* UITableViewCell.swift in Sources */,
 				CEC9805B226194250011858C /* MatchStatsPlayerView.swift in Sources */,
