@@ -11,6 +11,7 @@ import Alamofire
 
 struct StatsAPI: API {
     private static let userKeyQueryItem = URLQueryItem(name: "userkey", value: "A00239D3-45F6-4A0A-810C-54A347F144C2")
+    static let `default` = StatsAPI()
     
     let host: APIHost = StatsAPIHost()
     let sessionManager: SessionManager = SessionManager(configuration: URLSessionConfiguration.default)
