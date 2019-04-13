@@ -168,12 +168,12 @@
 			path = PlayerStatsAPI;
 			sourceTree = "<group>";
 		};
-		CEC9800E226173160011858C /* Models */ = {
+		CEC9800E226173160011858C /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				CEC9800F226173160011858C /* LeagueStat.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CEC98013226176020011858C /* StatsLoader */ = {
@@ -187,8 +187,9 @@
 		CEC980362261877C0011858C /* MatchStats */ = {
 			isa = PBXGroup;
 			children = (
-				CEC9804D22618A4B0011858C /* ViewController */,
-				CEC980372261877C0011858C /* Cells */,
+				CEC9800E226173160011858C /* Model */,
+				CEC9804D22618A4B0011858C /* View */,
+				CEC9806C2261B0B40011858C /* ViewModel */,
 			);
 			path = MatchStats;
 			sourceTree = "<group>";
@@ -251,13 +252,13 @@
 			path = Right;
 			sourceTree = "<group>";
 		};
-		CEC9804D22618A4B0011858C /* ViewController */ = {
+		CEC9804D22618A4B0011858C /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CEC9804E22618A650011858C /* MatchStatsViewController.swift */,
-				CEC9805422618C340011858C /* MatchStatsViewController+ViewState.swift */,
+				CEC980372261877C0011858C /* Cells */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 		CEC9805E22619F0F0011858C /* AsyncImageView */ = {
@@ -267,6 +268,21 @@
 				CEC9805F22619F0F0011858C /* AsyncImageView.xib */,
 			);
 			path = AsyncImageView;
+			sourceTree = "<group>";
+		};
+		CEC980692261B0690011858C /* PlayerStats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlayerStats;
+			sourceTree = "<group>";
+		};
+		CEC9806C2261B0B40011858C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEC9805422618C340011858C /* MatchStatsViewController+ViewState.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CED4531B22615C4A0021333B = {
@@ -294,11 +310,11 @@
 				CEC97FEE2261614F0011858C /* API */,
 				CEC98000226166B80011858C /* Extensions */,
 				CEC9800722616A040011858C /* PlayerStatsAPI */,
-				CEC9800E226173160011858C /* Models */,
-				CED4532722615C4A0021333B /* AppDelegate.swift */,
 				CEC98013226176020011858C /* StatsLoader */,
 				CEC980362261877C0011858C /* MatchStats */,
+				CEC980692261B0690011858C /* PlayerStats */,
 				CED4532922615C4A0021333B /* ViewController.swift */,
+				CED4532722615C4A0021333B /* AppDelegate.swift */,
 				CED4532B22615C4A0021333B /* Main.storyboard */,
 				CED4532E22615C4B0021333B /* Assets.xcassets */,
 				CED4533022615C4B0021333B /* LaunchScreen.storyboard */,
