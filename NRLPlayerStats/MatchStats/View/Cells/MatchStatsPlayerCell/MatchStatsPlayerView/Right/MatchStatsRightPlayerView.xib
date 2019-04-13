@@ -15,6 +15,7 @@
                 <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="MatchStatsRightPlayerView"/>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="imageButton" destination="ad5-op-Ghy" id="mlS-Xr-aPx"/>
                 <outlet property="imageView" destination="kuS-Xm-1S2" id="5EE-fL-hbD"/>
                 <outlet property="nameLabel" destination="DWv-Dz-8dr" id="YyJ-Bh-Hx1"/>
                 <outlet property="positionLabel" destination="3hd-Q5-KRk" id="BO8-7W-HVN"/>
@@ -54,19 +55,29 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="AsyncImageView"/>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad5-op-Ghy">
+                    <rect key="frame" x="370" y="12" width="40" height="40"/>
+                    <connections>
+                        <action selector="didTapImage" destination="-1" eventType="touchUpInside" id="hrL-Wd-S6M"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="kuS-Xm-1S2" firstAttribute="top" secondItem="DWv-Dz-8dr" secondAttribute="top" id="5oN-eu-0tX"/>
                 <constraint firstItem="JIy-4Y-Y0W" firstAttribute="top" secondItem="WHS-AL-U8b" secondAttribute="top" constant="12" id="7MU-Dc-bkU"/>
                 <constraint firstItem="DWv-Dz-8dr" firstAttribute="bottom" secondItem="WHS-AL-U8b" secondAttribute="centerY" id="Csk-sL-w40"/>
+                <constraint firstItem="ad5-op-Ghy" firstAttribute="top" secondItem="kuS-Xm-1S2" secondAttribute="top" id="DMN-gF-Daj"/>
+                <constraint firstItem="ad5-op-Ghy" firstAttribute="trailing" secondItem="kuS-Xm-1S2" secondAttribute="trailing" id="HAO-I7-pez"/>
                 <constraint firstItem="JIy-4Y-Y0W" firstAttribute="leading" secondItem="tkC-tN-ve3" secondAttribute="leading" constant="6" id="Je3-JI-dlA"/>
+                <constraint firstItem="ad5-op-Ghy" firstAttribute="leading" secondItem="kuS-Xm-1S2" secondAttribute="leading" id="Lga-pO-fcf"/>
                 <constraint firstItem="kuS-Xm-1S2" firstAttribute="width" secondItem="kuS-Xm-1S2" secondAttribute="height" multiplier="1:1" id="M3d-Et-2so"/>
                 <constraint firstItem="3hd-Q5-KRk" firstAttribute="top" secondItem="DWv-Dz-8dr" secondAttribute="bottom" constant="2" id="MEw-E3-zRl"/>
                 <constraint firstItem="3hd-Q5-KRk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JIy-4Y-Y0W" secondAttribute="trailing" constant="12" id="N5f-fK-Vv5"/>
                 <constraint firstAttribute="bottom" secondItem="JIy-4Y-Y0W" secondAttribute="bottom" constant="12" id="NLr-nz-qID"/>
                 <constraint firstItem="DWv-Dz-8dr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JIy-4Y-Y0W" secondAttribute="trailing" constant="12" id="T3d-4x-Y3W"/>
                 <constraint firstAttribute="bottom" secondItem="kuS-Xm-1S2" secondAttribute="bottom" constant="12" id="mYw-yK-J3n"/>
+                <constraint firstItem="ad5-op-Ghy" firstAttribute="bottom" secondItem="kuS-Xm-1S2" secondAttribute="bottom" id="oyf-Cc-tZo"/>
                 <constraint firstItem="kuS-Xm-1S2" firstAttribute="leading" secondItem="DWv-Dz-8dr" secondAttribute="trailing" constant="8" id="pMR-O9-qaU"/>
                 <constraint firstItem="tkC-tN-ve3" firstAttribute="trailing" secondItem="kuS-Xm-1S2" secondAttribute="trailing" constant="12" id="tdv-Ad-WOj"/>
                 <constraint firstItem="kuS-Xm-1S2" firstAttribute="top" secondItem="WHS-AL-U8b" secondAttribute="top" constant="12" id="xa1-3c-5Ru"/>

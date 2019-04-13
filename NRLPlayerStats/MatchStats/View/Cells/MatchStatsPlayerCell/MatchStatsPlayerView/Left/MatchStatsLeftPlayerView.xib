@@ -14,6 +14,7 @@
                 <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="MatchStatsLeftPlayerView"/>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="imageButton" destination="GBz-0x-UkM" id="40o-Gn-7P0"/>
                 <outlet property="imageView" destination="RMU-r6-bNU" id="fHl-rB-pUs"/>
                 <outlet property="nameLabel" destination="zUo-ra-hmy" id="gWV-VA-1eH"/>
                 <outlet property="positionLabel" destination="kNO-9v-EHO" id="WV1-gl-iod"/>
@@ -54,19 +55,29 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="AsyncImageView"/>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBz-0x-UkM">
+                    <rect key="frame" x="12" y="12" width="40" height="40"/>
+                    <connections>
+                        <action selector="didTapImage" destination="-1" eventType="touchUpInside" id="Vkz-iD-W5i"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="GBz-0x-UkM" firstAttribute="top" secondItem="RMU-r6-bNU" secondAttribute="top" id="5bW-qN-zoR"/>
                 <constraint firstItem="kik-bT-QVu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kNO-9v-EHO" secondAttribute="trailing" constant="12" id="6op-7g-7zR"/>
                 <constraint firstItem="kNO-9v-EHO" firstAttribute="top" secondItem="zUo-ra-hmy" secondAttribute="bottom" constant="2" id="7NL-00-ndD"/>
                 <constraint firstAttribute="trailing" secondItem="kik-bT-QVu" secondAttribute="trailing" constant="6" id="Jom-tg-QBj"/>
                 <constraint firstAttribute="bottom" secondItem="kik-bT-QVu" secondAttribute="bottom" constant="12" id="L1f-YU-mLU"/>
                 <constraint firstAttribute="bottom" secondItem="RMU-r6-bNU" secondAttribute="bottom" constant="12" id="PB8-w0-JKd"/>
+                <constraint firstItem="GBz-0x-UkM" firstAttribute="leading" secondItem="RMU-r6-bNU" secondAttribute="leading" id="Wzh-4Z-08A"/>
                 <constraint firstItem="zUo-ra-hmy" firstAttribute="bottom" secondItem="AG1-4k-vwf" secondAttribute="centerY" id="aSJ-MD-tyl"/>
                 <constraint firstItem="kNO-9v-EHO" firstAttribute="leading" secondItem="RMU-r6-bNU" secondAttribute="trailing" constant="8" id="aqy-gL-pev"/>
                 <constraint firstItem="RMU-r6-bNU" firstAttribute="top" secondItem="zUo-ra-hmy" secondAttribute="top" id="biZ-yx-akm"/>
+                <constraint firstItem="GBz-0x-UkM" firstAttribute="trailing" secondItem="RMU-r6-bNU" secondAttribute="trailing" id="dGs-4c-wq6"/>
                 <constraint firstItem="RMU-r6-bNU" firstAttribute="top" secondItem="AG1-4k-vwf" secondAttribute="top" constant="12" id="dsl-mz-jpR"/>
                 <constraint firstItem="kik-bT-QVu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zUo-ra-hmy" secondAttribute="trailing" constant="12" id="fo1-Ef-NLM"/>
+                <constraint firstItem="GBz-0x-UkM" firstAttribute="bottom" secondItem="RMU-r6-bNU" secondAttribute="bottom" id="gad-il-XCr"/>
                 <constraint firstItem="zUo-ra-hmy" firstAttribute="leading" secondItem="RMU-r6-bNU" secondAttribute="trailing" constant="8" id="hs4-c4-Ulk"/>
                 <constraint firstItem="kik-bT-QVu" firstAttribute="top" secondItem="AG1-4k-vwf" secondAttribute="top" constant="12" id="qBc-vx-vrd"/>
                 <constraint firstItem="RMU-r6-bNU" firstAttribute="leading" secondItem="AG1-4k-vwf" secondAttribute="leading" constant="12" id="vjh-OG-da8"/>

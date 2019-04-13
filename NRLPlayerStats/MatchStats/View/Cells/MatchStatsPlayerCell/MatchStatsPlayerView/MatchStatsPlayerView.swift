@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol MatchStatsPlayerViewDelegate: class {
+    func matchStatsPlayerView(_ view: MatchStatsPlayerView, didTapOnHeadshot playerId: Int)
+}
+
 class MatchStatsPlayerView: XibView {
     @IBOutlet private var imageView: AsyncImageView! {
         didSet { imageView.isRound = true }
@@ -16,6 +20,9 @@ class MatchStatsPlayerView: XibView {
     @IBOutlet private var nameLabel: UILabel!
     @IBOutlet private var positionLabel: UILabel!
     @IBOutlet private var statValueLabel: UILabel!
+    @IBOutlet private var imageButton: UIButton!
+    
+    weak var delegate: MatchStatsPlayerViewDelegate?
     
     var viewState: ViewState = .init() {
         didSet {
@@ -33,6 +40,11 @@ class MatchStatsPlayerView: XibView {
         }
         
         imageView.url = StatsAPI.getMediaUrl(playerId: id)
+    }
+    
+    @IBAction private func didTapImage() {
+        guard let id = viewState.playerId else { return }
+        delegate?.matchStatsPlayerView(self, didTapOnHeadshot: id)
     }
     
     func prepareForReuse() {
