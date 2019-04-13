@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEC97FEB2261609F0011858C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC97FEA2261609F0011858C /* Alamofire.framework */; };
+		CEC97FED226160B30011858C /* Shawshank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC97FEC226160B30011858C /* Shawshank.framework */; };
 		CED4532822615C4A0021333B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532722615C4A0021333B /* AppDelegate.swift */; };
 		CED4532A22615C4A0021333B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4532922615C4A0021333B /* ViewController.swift */; };
 		CED4532D22615C4A0021333B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4532B22615C4A0021333B /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CEC97FEA2261609F0011858C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		CEC97FEC226160B30011858C /* Shawshank.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Shawshank.framework; path = Carthage/Build/iOS/Shawshank.framework; sourceTree = "<group>"; };
 		CED4532422615C4A0021333B /* NRLPlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRLPlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4532722615C4A0021333B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED4532922615C4A0021333B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC97FEB2261609F0011858C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC97FED226160B30011858C /* Shawshank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEC97FE92261609F0011858C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEC97FEC226160B30011858C /* Shawshank.framework */,
+				CEC97FEA2261609F0011858C /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CED4531B22615C4A0021333B = {
 			isa = PBXGroup;
 			children = (
 				CED4532622615C4A0021333B /* NRLPlayerStats */,
 				CED4533B22615C4B0021333B /* NRLPlayerStatsTests */,
 				CED4532522615C4A0021333B /* Products */,
+				CEC97FE92261609F0011858C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +122,7 @@
 				CED4532022615C4A0021333B /* Sources */,
 				CED4532122615C4A0021333B /* Frameworks */,
 				CED4532222615C4A0021333B /* Resources */,
+				CEC97FE82261605B0011858C /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +208,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CEC97FE82261605B0011858C /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CED4532022615C4A0021333B /* Sources */ = {
@@ -362,6 +401,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EAN9592EK4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NRLPlayerStats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,6 +423,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EAN9592EK4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NRLPlayerStats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -399,6 +446,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EAN9592EK4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NRLPlayerStatsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -420,6 +471,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EAN9592EK4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NRLPlayerStatsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
