@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PlayerDetailsViewCell: UITableViewCell, NibLoading {
+class PlayerDetailsCell: UITableViewCell, NibLoading {
     @IBOutlet private var headshotView: AsyncImageView! {
         didSet { headshotView.isRound = true }
     }
@@ -34,7 +34,7 @@ class PlayerDetailsViewCell: UITableViewCell, NibLoading {
     }
 }
 
-extension PlayerDetailsViewCell {
+extension PlayerDetailsCell {
     struct ViewState {
         let playerId: Int?
         let name: String?

@@ -49,7 +49,7 @@ class PlayerStatsViewController: UITableViewController {
     }
     
     private func registerCells() {
-        tableView.registerCell(PlayerDetailsViewCell.self)
+        tableView.registerCell(PlayerDetailsCell.self)
         tableView.registerCell(PlayerDetailsStatCell.self)
     }
     
@@ -94,16 +94,18 @@ extension PlayerStatsViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: PlayerDetailsViewCell.reuseIdentifier, for: indexPath)
-            if let playerCell = cell as? PlayerDetailsViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: PlayerDetailsCell.reuseIdentifier, for: indexPath)
+            if let playerCell = cell as? PlayerDetailsCell {
                 playerCell.viewState = .init(player: player)
             }
+            cell.selectionStyle = .none
             return cell
             
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: PlayerDetailsStatCell.reuseIdentifier, for: indexPath)
             cell.textLabel?.text = viewState.title(at: indexPath)
             cell.detailTextLabel?.text = viewState.value(at: indexPath)
+            cell.selectionStyle = .none
             return cell
         }
     }

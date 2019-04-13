@@ -91,6 +91,7 @@ extension MatchStatsViewController {
             statCell.delegate = self
         }
         
+        cell.selectionStyle = .none
         return cell
     }
 }
