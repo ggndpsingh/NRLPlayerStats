@@ -56,5 +56,12 @@ extension MatchStatsViewController {
         func statType(at indexPath: IndexPath) -> LeagueStat.StatType {
             return leagueStats.element(at: indexPath.section)?.type ?? .tackles
         }
+        
+        func cellViewState(at indexPath: IndexPath) -> MatchStatsPlayerCell.ViewState {
+            let statType = self.statType(at: indexPath)
+            let teamsIds = self.teamsIds(at: indexPath)
+            let players  = self.players(at: indexPath)
+            return .init(statType: statType, teams: teamsIds, players: players)
+        }
     }
 }

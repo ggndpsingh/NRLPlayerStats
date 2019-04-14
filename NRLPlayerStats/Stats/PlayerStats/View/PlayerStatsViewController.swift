@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PlayerStatsViewController: UITableViewController {
+class PlayerStatsViewController: StatsViewController<LeaguePlayer> {
     private let statCellIdentifier = "PlayerStatCell"
     
     var details: (Int, Int)? = nil {
@@ -20,18 +20,9 @@ class PlayerStatsViewController: UITableViewController {
         }
     }
     
-    private var player: LeaguePlayer? {
-        didSet {
-            title = player?.name
-            self.viewState = .init(player: player)
-            tableView.reloadData()
-        }
-    }
-    
-    private var statsLoader: StatsLoader<LeaguePlayer>?
-    
     private var viewState: ViewState = .init() {
         didSet {
+            title = viewState.title
             tableView.reloadData()
         }
     }
@@ -39,48 +30,22 @@ class PlayerStatsViewController: UITableViewController {
     override func loadView() {
         super.loadView()
         title = "Player Stats"
-        registerCells()
-        setupRefreshControl()
+        registerCells(PlayerDetailsCell.self, PlayerDetailsStatCell.self)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadStats()
+    override func didFinishLoading(stat: LeaguePlayer) {
+        viewState = .init(player: stat)
     }
     
-    private func registerCells() {
-        tableView.registerCell(PlayerDetailsCell.self)
-        tableView.registerCell(PlayerDetailsStatCell.self)
-    }
-    
-    private func setupRefreshControl() {
-        refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(loadStats), for: .valueChanged)
-    }
-    
-    @objc
-    private func loadStats() {
-        statsLoader?.request { [weak self] result in
-            self?.refreshControl?.endRefreshing()
-            
-            switch result {
-            case .success(let player):
-                self?.player = player
-            case .failure:
-                self?.showFailureAlert()
-            }
-        }
-    }
-    
-    private func showFailureAlert() {
-        let alert = UIAlertController(title: "Error", message: "Failed to load player stats 😞", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "OK", style: .cancel) { [weak self] _ in
+    override func showFailureAlert() {
+        let message = "Failed to load player stats 😞"
+        showFailureAlert(message: message) { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }
-        alert.addAction(ok)
-        present(alert, animated: true)
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension PlayerStatsViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -96,7 +61,7 @@ extension PlayerStatsViewController {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: PlayerDetailsCell.reuseIdentifier, for: indexPath)
             if let playerCell = cell as? PlayerDetailsCell {
-                playerCell.viewState = .init(player: player)
+                playerCell.viewState = viewState.playerDetailsViewState
             }
             cell.selectionStyle = .none
             return cell
@@ -110,6 +75,8 @@ extension PlayerStatsViewController {
         }
     }
 }
+
+// MARK: - UITableViewDelegate
 
 extension PlayerStatsViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

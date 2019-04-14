@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4AB8CB2262D01400FDA3B2 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AB8CA2262D01400FDA3B2 /* StatsViewController.swift */; };
 		CE78DA3C2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */; };
 		CE78DA402261E58F00F9DA1F /* MatchSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA3F2261E58F00F9DA1F /* MatchSelectionViewController.swift */; };
 		CE78DA422261E5A700F9DA1F /* MatchSelectionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA412261E5A700F9DA1F /* MatchSelectionContentView.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE4AB8CA2262D01400FDA3B2 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerStatsViewController+ViewState.swift"; sourceTree = "<group>"; };
 		CE78DA3F2261E58F00F9DA1F /* MatchSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSelectionViewController.swift; sourceTree = "<group>"; };
 		CE78DA412261E5A700F9DA1F /* MatchSelectionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSelectionContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE4AB8CC2262DBD700FDA3B2 /* StatsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE4AB8CA2262D01400FDA3B2 /* StatsViewController.swift */,
+			);
+			path = StatsViewController;
+			sourceTree = "<group>";
+		};
+		CE4AB8CD2262DBEB00FDA3B2 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				CE4AB8CC2262DBD700FDA3B2 /* StatsViewController */,
+				CEC980362261877C0011858C /* MatchStats */,
+				CEC980692261B0690011858C /* PlayerStats */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
 		CE78DA3D2261E53300F9DA1F /* MatchSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,8 +420,7 @@
 				CEC9800722616A040011858C /* PlayerStatsAPI */,
 				CEC98013226176020011858C /* StatsLoader */,
 				CE78DA3D2261E53300F9DA1F /* MatchSelection */,
-				CEC980362261877C0011858C /* MatchStats */,
-				CEC980692261B0690011858C /* PlayerStats */,
+				CE4AB8CD2262DBEB00FDA3B2 /* Stats */,
 				CEC9803F226187A20011858C /* Helpers */,
 				CED4532722615C4A0021333B /* AppDelegate.swift */,
 				CED4532B22615C4A0021333B /* Main.storyboard */,
@@ -601,6 +620,7 @@
 				CEC98048226188970011858C /* MatchStatsRightPlayerView.swift in Sources */,
 				CEC9805322618B500011858C /* UITableViewCell.swift in Sources */,
 				CEC9805B226194250011858C /* MatchStatsPlayerView.swift in Sources */,
+				CE4AB8CB2262D01400FDA3B2 /* StatsViewController.swift in Sources */,
 				CEC9800C22616A040011858C /* StatsAPI.swift in Sources */,
 				CED4532822615C4A0021333B /* AppDelegate.swift in Sources */,
 				CEC98042226187A20011858C /* NibLoading.swift in Sources */,

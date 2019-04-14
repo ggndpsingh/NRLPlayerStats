@@ -13,6 +13,9 @@ extension PlayerStatsViewController {
     struct ViewState {
         private var rows: [Row] = []
         
+        let title: String?
+        let playerDetailsViewState: PlayerDetailsCell.ViewState
+        
         let numberOfSections: Int = 2
         
         func numberOfRows(in section: Int) -> Int {
@@ -38,6 +41,9 @@ extension PlayerStatsViewController {
         }
         
         init(player: LeaguePlayer? = nil) {
+            title = player?.name
+            playerDetailsViewState = .init(player: player)
+            
             guard let _ = player?.lastMatchId else {
                 rows.append(.noLastMatch)
                 return
