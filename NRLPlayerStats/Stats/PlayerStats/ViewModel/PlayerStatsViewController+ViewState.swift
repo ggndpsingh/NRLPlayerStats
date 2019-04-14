@@ -27,7 +27,7 @@ extension PlayerStatsViewController {
         }
         
         func titleForHeader(in section: Int) -> String? {
-            return section == 0 ? nil : "Stats"
+            return section == 0 ? nil : LocalizedStrings.PlayerStats.statsHeader
         }
         
         func title(at indexPath: IndexPath) -> String? {
@@ -321,138 +321,138 @@ extension PlayerStatsViewController.ViewState {
         var title: String {
             switch self {
             case .errors:
-                return "Errors"
+                return LocalizedStrings.PlayerStatType.errors
             case .goals:
-                return "goals"
+                return LocalizedStrings.PlayerStatType.goals
             case .intercepted:
-                return "Intercepted"
+                return LocalizedStrings.PlayerStatType.intercepted
             case .intercepts:
-                return "Intercepts"
+                return LocalizedStrings.PlayerStatType.intercepts
             case .kicks:
-                return "Kicks"
+                return LocalizedStrings.PlayerStatType.kicks
             case .points:
-                return "Points"
+                return LocalizedStrings.PlayerStatType.points
             case .possessions:
-                return "Possessions"
+                return LocalizedStrings.PlayerStatType.possessions
             case .runs:
-                return "Runs"
+                return LocalizedStrings.PlayerStatType.runs
             case .tackles:
-                return "Tackles"
+                return LocalizedStrings.PlayerStatType.tackles
             case .tries:
-                return "Tries"
+                return LocalizedStrings.PlayerStatType.tries
             case .minutesPlayed:
-                return "Minutes Played"
+                return LocalizedStrings.PlayerStatType.minutesPlayed
             case .attackingKicks:
-                return "AttackingKicks"
+                return LocalizedStrings.PlayerStatType.attackingKicks
             case .bombsCaught:
-                return "Bombs Caught"
+                return LocalizedStrings.PlayerStatType.bombsCaught
             case .bombsDropped:
-                return "Bombs Dropped"
+                return LocalizedStrings.PlayerStatType.bombsDropped
             case .chargedDown:
-                return "Charged Down"
+                return LocalizedStrings.PlayerStatType.chargedDown
             case .changesDown:
-                return "Changes Down"
+                return LocalizedStrings.PlayerStatType.changesDown
             case .dropOuts:
-                return "Drop Outs"
+                return LocalizedStrings.PlayerStatType.dropOuts
             case .dummyHalfRuns:
-                return "Dummy Half Runs"
+                return LocalizedStrings.PlayerStatType.dummyHalfRuns
             case .effectiveOffloads:
-                return "Effective Offloads"
+                return LocalizedStrings.PlayerStatType.effectiveOffloads
             case .fantasyPoints:
-                return "Fantasy Points"
+                return LocalizedStrings.PlayerStatType.fantasyPoints
             case .fieldGoalAttempts:
-                return "Field Goal Attempts"
+                return LocalizedStrings.PlayerStatType.fieldGoalAttempts
             case .fieldGoalMisses:
-                return "Field Goal Misses"
+                return LocalizedStrings.PlayerStatType.fieldGoalMisses
             case .fieldGoals:
-                return "Field Goals"
+                return LocalizedStrings.PlayerStatType.fieldGoals
             case .forcedDropOuts:
-                return "Forced Drop Outs"
+                return LocalizedStrings.PlayerStatType.forcedDropOuts
             case .generalPlayPass:
-                return "General Play Pass"
+                return LocalizedStrings.PlayerStatType.generalPlayPass
             case .goalMisses:
-                return "Goal Misses"
+                return LocalizedStrings.PlayerStatType.goalMisses
             case .ineffectiveTackles:
-                return "Ineffective Tackles"
+                return LocalizedStrings.PlayerStatType.ineffectiveTackles
             case .inGoalEscapes:
-                return "In Goal Escapes"
+                return LocalizedStrings.PlayerStatType.inGoalEscapes
             case .interchangesOff:
-                return "Interchanges Off"
+                return LocalizedStrings.PlayerStatType.interchangesOff
             case .interchangesOn:
-                return "Interchanges On"
+                return LocalizedStrings.PlayerStatType.interchangesOn
             case .kickErrors:
-                return "Kick Errors"
+                return LocalizedStrings.PlayerStatType.kickErrors
             case .kickMetres:
-                return "Kick Metres"
+                return LocalizedStrings.PlayerStatType.kickMetres
             case .kickReturnMeters:
-                return "Kick ReturnMeters"
+                return LocalizedStrings.PlayerStatType.kickReturnMeters
             case .kickReturns:
-                return "Kick Returns"
+                return LocalizedStrings.PlayerStatType.kickReturns
             case .kicks4020:
-                return "Kicks 4020"
+                return LocalizedStrings.PlayerStatType.kicks4020
             case .kicksDead:
-                return "Kicks Dead"
+                return LocalizedStrings.PlayerStatType.kicksDead
             case .lastTouchTryAssists:
-                return "Last Touch Try Assists"
+                return LocalizedStrings.PlayerStatType.lastTouchTryAssists
             case .lineBreakAssists:
-                return "Line Break Assists"
+                return LocalizedStrings.PlayerStatType.lineBreakAssists
             case .lineBreakCauses:
-                return "Line Break Causes"
+                return LocalizedStrings.PlayerStatType.lineBreakCauses
             case .lineBreaks:
-                return "Line Breaks"
+                return LocalizedStrings.PlayerStatType.lineBreaks
             case .lineEngagements:
-                return "Line Engagements"
+                return LocalizedStrings.PlayerStatType.lineEngagements
             case .longKicks:
-                return "Long Kicks"
+                return LocalizedStrings.PlayerStatType.longKicks
             case .missedTackles:
-                return "Missed Tackles"
+                return LocalizedStrings.PlayerStatType.missedTackles
             case .offLoads:
-                return "Off Loads"
+                return LocalizedStrings.PlayerStatType.offLoads
             case .onePassRuns:
-                return "One Pass Runs"
+                return LocalizedStrings.PlayerStatType.onePassRuns
             case .penalitiesConceded:
-                return "Penalities Conceded"
+                return LocalizedStrings.PlayerStatType.penalitiesConceded
             case .playTheBalls:
-                return "Play The Balls"
+                return LocalizedStrings.PlayerStatType.playTheBalls
             case .runMeters:
-                return "Run Meters"
+                return LocalizedStrings.PlayerStatType.runMeters
             case .runs7MetersOrLess:
-                return "Runs 7 Meters Or Less"
+                return LocalizedStrings.PlayerStatType.runs7MetersOrLess
             case .runs8MetersOrMore:
-                return "Runs 8 Meters Or More"
+                return LocalizedStrings.PlayerStatType.runs8MetersOrMore
             case .sendOffs:
-                return "Send Offs"
+                return LocalizedStrings.PlayerStatType.sendOffs
             case .sinBins:
-                return "Sin Bins"
+                return LocalizedStrings.PlayerStatType.sinBins
             case .stealsOneOnOne:
-                return "Steals One On One"
+                return LocalizedStrings.PlayerStatType.stealsOneOnOne
             case .stolenOneOnOne:
-                return "Stolen One On One"
+                return LocalizedStrings.PlayerStatType.stolenOneOnOne
             case .tackleBusts:
-                return "Tackle Busts"
+                return LocalizedStrings.PlayerStatType.tackleBusts
             case .tackledOpp20:
-                return "Tackled Opposition 20"
+                return LocalizedStrings.PlayerStatType.tackledOpp20
             case .tackledOppHalf:
-                return "Tackled Opposition Half"
+                return LocalizedStrings.PlayerStatType.tackledOppHalf
             case .tacklesOneOnOne:
-                return "Tackles One On One"
+                return LocalizedStrings.PlayerStatType.tacklesOneOnOne
             case .tryAssists:
-                return "Try Assists"
+                return LocalizedStrings.PlayerStatType.tryAssists
             case .tryCauses:
-                return "Try Causes"
+                return LocalizedStrings.PlayerStatType.tryCauses
             case .tryContributionPercentage:
-                return "Try Contribution Percentage"
+                return LocalizedStrings.PlayerStatType.tryContributionPercentage
             case .tryContributions:
-                return "Try Contributions"
+                return LocalizedStrings.PlayerStatType.tryContributions
             case .tryInvolvements:
-                return "Try Involvements"
+                return LocalizedStrings.PlayerStatType.tryInvolvements
             case .twentyMetreRestarts:
-                return "Twenty Metre Restarts"
+                return LocalizedStrings.PlayerStatType.twentyMetreRestarts
             case .weightedKicks:
-                return "Weighted Kicks"
+                return LocalizedStrings.PlayerStatType.weightedKicks
                 
             case .noLastMatch:
-                return "No last match found 😞"
+                return LocalizedStrings.PlayerStatType.noLastMatch + " 😞"
             }
         }
         

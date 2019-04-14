@@ -29,7 +29,7 @@ class PlayerStatsViewController: StatsViewController<LeaguePlayer> {
     
     override func loadView() {
         super.loadView()
-        title = "Player Stats"
+        title = LocalizedStrings.PlayerStats.title
         registerCells(PlayerDetailsCell.self, PlayerDetailsStatCell.self)
     }
     
@@ -38,7 +38,7 @@ class PlayerStatsViewController: StatsViewController<LeaguePlayer> {
     }
     
     override func showFailureAlert() {
-        let message = "Failed to load player stats 😞"
+        let message = LocalizedStrings.PlayerStats.failureErrorMessage + " 😞"
         showFailureAlert(message: message) { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }

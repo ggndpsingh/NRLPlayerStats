@@ -60,6 +60,7 @@
 		CED4532F22615C4B0021333B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED4532E22615C4B0021333B /* Assets.xcassets */; };
 		CED4533222615C4B0021333B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4533022615C4B0021333B /* LaunchScreen.storyboard */; };
 		CED4533D22615C4B0021333B /* NRLPlayerStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4533C22615C4B0021333B /* NRLPlayerStatsTests.swift */; };
+		CED4FC2522634365002BEB4E /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4FC2422634365002BEB4E /* LocalizedStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		CED4533822615C4B0021333B /* NRLPlayerStatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NRLPlayerStatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4533C22615C4B0021333B /* NRLPlayerStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRLPlayerStatsTests.swift; sourceTree = "<group>"; };
 		CED4533E22615C4B0021333B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED4FC2422634365002BEB4E /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -425,6 +427,7 @@
 				CE4AB8CD2262DBEB00FDA3B2 /* Stats */,
 				CEC9803F226187A20011858C /* Helpers */,
 				CED4532722615C4A0021333B /* AppDelegate.swift */,
+				CED4FC2422634365002BEB4E /* LocalizedStrings.swift */,
 				CED4532B22615C4A0021333B /* Main.storyboard */,
 				CED4532E22615C4B0021333B /* Assets.xcassets */,
 				CED4533022615C4B0021333B /* LaunchScreen.storyboard */,
@@ -607,6 +610,7 @@
 				CEC9804C226189570011858C /* MatchStatsPlayerCell.swift in Sources */,
 				CEC97FF42261614F0011858C /* APIError.swift in Sources */,
 				CEC98012226175FD0011858C /* StatsLoader.swift in Sources */,
+				CED4FC2522634365002BEB4E /* LocalizedStrings.swift in Sources */,
 				CE78DA422261E5A700F9DA1F /* MatchSelectionContentView.swift in Sources */,
 				CEC98006226166B80011858C /* String.swift in Sources */,
 				CE78DA3C2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift in Sources */,
