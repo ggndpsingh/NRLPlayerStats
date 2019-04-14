@@ -19,7 +19,7 @@ class MatchSelectionViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        title = "🏉 NRL 2017 Stats"
+        title = "🏉 " + LocalizedStrings.MatchSelection.title
         contentView.delegate = self
     }
 }

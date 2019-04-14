@@ -92,7 +92,9 @@
                         <viewLayoutGuide key="safeArea" id="nxo-CL-xb7"/>
                         <connections>
                             <outlet property="goButton" destination="9XV-JO-ntj" id="boa-q5-xze"/>
+                            <outlet property="matchLabel" destination="JRE-RF-CRL" id="EPY-Lb-T9T"/>
                             <outlet property="matchPicker" destination="VIQ-x8-OTJ" id="1lV-p2-UCO"/>
+                            <outlet property="roundLabel" destination="NYc-Ha-hM1" id="F7g-NR-Ecy"/>
                             <outlet property="roundPicker" destination="zfu-Yq-6mf" id="9hX-Ut-Xxx"/>
                         </connections>
                     </view>

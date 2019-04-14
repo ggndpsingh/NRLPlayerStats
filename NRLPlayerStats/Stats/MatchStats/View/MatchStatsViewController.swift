@@ -26,7 +26,7 @@ class MatchStatsViewController: StatsViewController<[LeagueStat]> {
     
     override func loadView() {
         super.loadView()
-        title = "Match Stats"
+        title = LocalizedStrings.MatchStats.title
         registerCells(MatchStatsPlayerCell.self)
         registerForPreviewing(with: self, sourceView: tableView)
     }
@@ -36,7 +36,7 @@ class MatchStatsViewController: StatsViewController<[LeagueStat]> {
     }
     
     override func showFailureAlert() {
-        let message = "No stats found for this match 😞"
+        let message = LocalizedStrings.MatchStats.failureErrorMessage + " 😞"
         showFailureAlert(message: message) { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }

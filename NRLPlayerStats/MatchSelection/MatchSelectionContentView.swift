@@ -14,6 +14,17 @@ protocol MatchSelectionContentViewDelegate: class {
 }
 
 class MatchSelectionContentView: UIView {
+    @IBOutlet private var roundLabel: UILabel! {
+        didSet {
+            roundLabel.text = LocalizedStrings.MatchSelection.round
+        }
+    }
+    @IBOutlet private var matchLabel: UILabel! {
+        didSet {
+            matchLabel.text = LocalizedStrings.MatchSelection.match
+        }
+    }
+    
     @IBOutlet var roundPicker: UIPickerView! {
         didSet {
             roundPicker.dataSource = self
@@ -32,6 +43,7 @@ class MatchSelectionContentView: UIView {
         didSet {
             goButton.layer.cornerRadius = 5
             goButton.layer.masksToBounds = true
+            goButton.setTitle(LocalizedStrings.common.go, for: .normal)
         }
     }
     
