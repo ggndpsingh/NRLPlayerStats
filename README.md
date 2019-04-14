@@ -1,14 +1,18 @@
 # NRLPlayerStats
 > Get player stats for all games from the 2017 season of NRL
 
-[![Swift Version][swift-image]][swift-url]
-
 ## Features
 
 - [x] Select Round & Match
 - [x] Get Stats for top players in the selected match
 - [x] Get detailed stats for a player's last match
 - [x] Force Touch on player in match stats to see player stats
+
+### Supported match stats
+- 🤸‍♂️ Most Tackles
+- 🏃‍♂️ Most Runs
+- 💯 Most Fantasy Points
+- 📏 Most Distance Run
 
 ## Requirements
 
