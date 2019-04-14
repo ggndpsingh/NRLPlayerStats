@@ -48,33 +48,7 @@ class NRLPlayerStatsTests: XCTestCase {
         waitForExpectations(timeout: 3, handler: nil)
     }
     
-    func testCanLoadAndSerialisePlayerStats() {
-        let endpoint = TestEndpoint.player
-        let expectedPath = api.urlComponents(for: endpoint).path
-        let json = Bundle(for: NRLPlayerStatsTests.self).json(named: "validPlayerStats")
-        
-        Shawshank.take(matching: .path(expectedPath)).fixture(json)
-        
-        let expect = expectation(description: "response successful")
-        api.request(endpoint) { (result: Swift.Result<LeaguePlayer, APIError>) in
-            switch result {
-            case .success(let player):
-                XCTAssertEqual(player.name, "Matt Prior")
-                XCTAssertEqual(player.position, "Prop")
-                XCTAssertEqual(player.lastMatchStats.tackles, 14)
-                XCTAssertEqual(player.lastMatchStats.minutesPlayed, 49)
-                XCTAssertNil(player.lastMatchStats.fieldGoalAttempts)
-                expect.fulfill()
-            case .failure:
-                XCTFail();
-                return
-            }
-        }
-        
-        waitForExpectations(timeout: 3, handler: nil)
-    }
-    
-    func testBadJSON() {
+    func testInvalidJSONResultsInAnError() {
         let endpoint = TestEndpoint.match
         let expectedPath = api.urlComponents(for: endpoint).path
         let json = Bundle(for: NRLPlayerStatsTests.self).json(named: "invalidMatchStats")
@@ -97,15 +71,16 @@ class NRLPlayerStatsTests: XCTestCase {
         waitForExpectations(timeout: 3, handler: nil)
     }
     
-    func testCanCorrectlyDecodeStatsFromJSONData() {
+    func testMatchStatsViewState() {
         let json = Bundle(for: NRLPlayerStatsTests.self).json(named: "validMatchStats")
-        let stats = try? JSONDecoder().decode([LeagueStat].self, from: json.data)
+        
+        let stats = try? [LeagueStat].decode(from: json.data)
         XCTAssertNotNil(stats)
-        XCTAssertEqual(stats?.count, 2)
-        XCTAssertEqual(stats?.first?.type, .tackles)
-        XCTAssertEqual(stats?.first?.teamA.name, "Penrith")
-        XCTAssertEqual(stats?.first?.teamB.name, "Canterbury")
-        XCTAssertEqual(stats?.first?.teamA.topPlayers.first?.name, "Peter Wallace")
-        XCTAssertEqual(stats?.first?.teamB.topPlayers.first?.name, "Aiden Tolman")
+        
+        let viewState = MatchStatsViewController.ViewState(stats: stats!)
+        XCTAssertEqual(viewState.numberOfSections, 2)
+        XCTAssertEqual(viewState.numberOfRows(in: 0), 2)
+        XCTAssertEqual(viewState.titleForSection(at: 0), LeagueStat.StatType.tackles.title)
+        XCTAssertEqual(viewState.teamsIds(at: IndexPath(row: 1, section: 1)).0, 55011)
     }
 }

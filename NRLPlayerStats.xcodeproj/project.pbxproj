@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE4AB8CB2262D01400FDA3B2 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AB8CA2262D01400FDA3B2 /* StatsViewController.swift */; };
+		CE4AB8CF2262DD8900FDA3B2 /* PlayerStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AB8CE2262DD8900FDA3B2 /* PlayerStatsTests.swift */; };
 		CE78DA3C2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */; };
 		CE78DA402261E58F00F9DA1F /* MatchSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA3F2261E58F00F9DA1F /* MatchSelectionViewController.swift */; };
 		CE78DA422261E5A700F9DA1F /* MatchSelectionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA412261E5A700F9DA1F /* MatchSelectionContentView.swift */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		CE4AB8CA2262D01400FDA3B2 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		CE4AB8CE2262DD8900FDA3B2 /* PlayerStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsTests.swift; sourceTree = "<group>"; };
 		CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerStatsViewController+ViewState.swift"; sourceTree = "<group>"; };
 		CE78DA3F2261E58F00F9DA1F /* MatchSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSelectionViewController.swift; sourceTree = "<group>"; };
 		CE78DA412261E5A700F9DA1F /* MatchSelectionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSelectionContentView.swift; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 			children = (
 				CE78DA472261F37D00F9DA1F /* TestAPI.swift */,
 				CED4533C22615C4B0021333B /* NRLPlayerStatsTests.swift */,
+				CE4AB8CE2262DD8900FDA3B2 /* PlayerStatsTests.swift */,
 				CE78DA492261F3E700F9DA1F /* invalidMatchStats.json */,
 				CE78DA4A2261F3E700F9DA1F /* validMatchStats.json */,
 				CE78DA4E2261F51100F9DA1F /* validPlayerStats.json */,
@@ -642,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE78DA482261F37D00F9DA1F /* TestAPI.swift in Sources */,
+				CE4AB8CF2262DD8900FDA3B2 /* PlayerStatsTests.swift in Sources */,
 				CED4533D22615C4B0021333B /* NRLPlayerStatsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
