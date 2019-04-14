@@ -12,10 +12,6 @@ import UIKit
 class StatsViewController<T: Decodable>: UITableViewController {
     var statsLoader: StatsLoader<T>?
     
-    func registerCells(_ cells: NibLoading.Type...) {
-        cells.forEach { tableView.registerCell($0) }
-    }
-    
     override func loadView() {
         super.loadView()
         setupRefreshControl()
@@ -24,6 +20,10 @@ class StatsViewController<T: Decodable>: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadStats()
+    }
+    
+    func registerCells(_ cells: NibLoading.Type...) {
+        cells.forEach { tableView.registerCell($0) }
     }
     
     func setupRefreshControl() {

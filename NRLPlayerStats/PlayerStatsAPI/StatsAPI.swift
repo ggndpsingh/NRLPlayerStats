@@ -17,7 +17,7 @@ struct StatsAPI: API {
     let sessionManager: SessionManager = SessionManager(configuration: URLSessionConfiguration.default)
     
     /// This is where a bit of the magic happens.
-    /// The API & Endpoint join hand to generate the URL we need for our request.
+    /// The API & Endpoint join hands to generate the URL we need for our request.
     func urlComponents(for endpoint: Endpoint) -> URLComponents {
         var components = host.baseURLComponents
         components.path = components.path.stringByAppendingPathComponent(endpoint.path)
