@@ -1,3 +1,4 @@
 github "Alamofire/Alamofire" "4.8.2"
 github "atetlaw/shawshank" "0.0.4"
-github "kean/Nuke" "7.6"
+github "ggndpsingh/SwiftColorPalette" "0.1"
+github "kean/Nuke" "7.6.1"

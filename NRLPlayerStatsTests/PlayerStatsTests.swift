@@ -18,7 +18,6 @@ class PlayerStatsTests: XCTestCase {
         let endpoint = TestEndpoint.player
         let expectedPath = api.urlComponents(for: endpoint).path
         let json = Bundle(for: NRLPlayerStatsTests.self).json(named: "validPlayerStats")
-        
         Shawshank.take(matching: .path(expectedPath)).fixture(json)
         
         let expect = expectation(description: "response successful")

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ColorPalette
 
 class MatchStatsViewController: StatsViewController<[LeagueStat]> {
     var match: MatchSelectionViewController.Match = .init() {

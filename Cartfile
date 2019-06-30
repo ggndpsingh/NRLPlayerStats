@@ -1,5 +1,5 @@
 github "Alamofire/Alamofire" ~> 4.7
 github "kean/Nuke"
-
+github "ggndpsingh/SwiftColorPalette"
 # Testing
 github "atetlaw/shawshank"

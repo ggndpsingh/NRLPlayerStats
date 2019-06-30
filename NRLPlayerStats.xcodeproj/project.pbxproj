@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0FD4EA226D7E4C004FF7D8 /* ColorPalette.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0FD4E9226D7E4C004FF7D8 /* ColorPalette.framework */; };
 		CE4AB8CB2262D01400FDA3B2 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AB8CA2262D01400FDA3B2 /* StatsViewController.swift */; };
 		CE4AB8CF2262DD8900FDA3B2 /* PlayerStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AB8CE2262DD8900FDA3B2 /* PlayerStatsTests.swift */; };
 		CE78DA3C2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */; };
@@ -18,6 +19,7 @@
 		CE78DA4B2261F3E700F9DA1F /* invalidMatchStats.json in Resources */ = {isa = PBXBuildFile; fileRef = CE78DA492261F3E700F9DA1F /* invalidMatchStats.json */; };
 		CE78DA4C2261F3E700F9DA1F /* validMatchStats.json in Resources */ = {isa = PBXBuildFile; fileRef = CE78DA4A2261F3E700F9DA1F /* validMatchStats.json */; };
 		CE78DA4F2261F51100F9DA1F /* validPlayerStats.json in Resources */ = {isa = PBXBuildFile; fileRef = CE78DA4E2261F51100F9DA1F /* validPlayerStats.json */; };
+		CEB518462286E87100616354 /* SafeDoubleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB518452286E87100616354 /* SafeDoubleViewController.swift */; };
 		CEC97FF32261614F0011858C /* APIRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FEF2261614F0011858C /* APIRequestBuilder.swift */; };
 		CEC97FF42261614F0011858C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FF02261614F0011858C /* APIError.swift */; };
 		CEC97FF52261614F0011858C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC97FF12261614F0011858C /* API.swift */; };
@@ -74,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0FD4E9226D7E4C004FF7D8 /* ColorPalette.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ColorPalette.framework; path = Carthage/Build/iOS/ColorPalette.framework; sourceTree = "<group>"; };
 		CE4AB8CA2262D01400FDA3B2 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		CE4AB8CE2262DD8900FDA3B2 /* PlayerStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsTests.swift; sourceTree = "<group>"; };
 		CE78DA3B2261D46900F9DA1F /* PlayerStatsViewController+ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerStatsViewController+ViewState.swift"; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		CE78DA492261F3E700F9DA1F /* invalidMatchStats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalidMatchStats.json; sourceTree = "<group>"; };
 		CE78DA4A2261F3E700F9DA1F /* validMatchStats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = validMatchStats.json; sourceTree = "<group>"; };
 		CE78DA4E2261F51100F9DA1F /* validPlayerStats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = validPlayerStats.json; sourceTree = "<group>"; };
+		CEB518452286E87100616354 /* SafeDoubleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeDoubleViewController.swift; sourceTree = "<group>"; };
 		CEC97FEF2261614F0011858C /* APIRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestBuilder.swift; sourceTree = "<group>"; };
 		CEC97FF02261614F0011858C /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		CEC97FF12261614F0011858C /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			files = (
 				CEC97FF8226161A90011858C /* Alamofire.framework in Frameworks */,
 				CEC9806422619FA70011858C /* Nuke.framework in Frameworks */,
+				CE0FD4EA226D7E4C004FF7D8 /* ColorPalette.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +216,7 @@
 		CEC97FE92261609F0011858C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE0FD4E9226D7E4C004FF7D8 /* ColorPalette.framework */,
 				CEC9806322619FA70011858C /* Nuke.framework */,
 				CEC97FF9226161B20011858C /* Shawshank.framework */,
 				CEC97FF7226161A90011858C /* Alamofire.framework */,
@@ -429,6 +435,7 @@
 				CED4532722615C4A0021333B /* AppDelegate.swift */,
 				CED4FC2422634365002BEB4E /* LocalizedStrings.swift */,
 				CED4532B22615C4A0021333B /* Main.storyboard */,
+				CEB518452286E87100616354 /* SafeDoubleViewController.swift */,
 				CED4532E22615C4B0021333B /* Assets.xcassets */,
 				CED4533022615C4B0021333B /* LaunchScreen.storyboard */,
 				CED4533322615C4B0021333B /* Info.plist */,
@@ -589,6 +596,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ColorPalette.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputFileListPaths = (
@@ -632,6 +640,7 @@
 				CED4532822615C4A0021333B /* AppDelegate.swift in Sources */,
 				CEC98042226187A20011858C /* NibLoading.swift in Sources */,
 				CEC980712261B8A30011858C /* LeaguePlayer.swift in Sources */,
+				CEB518462286E87100616354 /* SafeDoubleViewController.swift in Sources */,
 				CEC98005226166B80011858C /* Decodable.swift in Sources */,
 				CEC97FF62261614F0011858C /* Endpoint.swift in Sources */,
 				CEC9805122618B410011858C /* UITableView.swift in Sources */,
